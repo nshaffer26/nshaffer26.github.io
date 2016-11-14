@@ -6,17 +6,7 @@
   padding-left:15px;
 }
 
-ul {
-  font-size: 20px;
-}
 
-p {
-  font-size: 20px;
-}
-
-a {
-  font-size: 20px;
-}
 
 table, th, td {
   border-collapse: collapse;
@@ -24,12 +14,12 @@ table, th, td {
 }
 
 body {
-  margin-right: 50px;
-  margin-left: 50px;
+  margin-right: 3%;
+  margin-left: 3%;
 }
 
 input {
   width: 100px;
   height: 50px;
-  font-size: 20px;
+  font-size: 100%;
 }
