@@ -13,11 +13,6 @@ table, th, td {
   content: inherit;
 }
 
-body {
-  margin-right: 3%;
-  margin-left: 3%;
-}
-
 input {
   width: 100px;
   height: 50px;
