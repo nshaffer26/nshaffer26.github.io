@@ -15,8 +15,21 @@ table, th, td {
   content: inherit;
 }
 
-input {
+button {
   width: 100px;
   height: 50px;
   font-size: 100%;
+}
+
+#BtnClk {
+  background-color: navy;
+  color: white;
+}
+
+#ImgMe {
+  float: right;
+  width: 25%;
+  height: inherit;
+  padding-right: 10%;
+  padding-left: 5%;
 }
