@@ -2,6 +2,9 @@
   float: top;
   width: 100%;
   height: inherit;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 body {
   padding-left: 0px;
