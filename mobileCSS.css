@@ -1,3 +1,8 @@
+#ImgMe {
+  float: top;
+  width: 100%;
+  height: inherit;
+}
 body {
   padding-left: 0px;
   padding-right: 0px;
