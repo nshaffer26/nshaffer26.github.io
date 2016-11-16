@@ -23,10 +23,6 @@ body {
 ul, p, div {
   font-size: 120%;
 }
-table, th, td {
-  border-collapse: collapse;
-  content: inherit;
-}
 button {
   width: 100px;
   height: 50px;
