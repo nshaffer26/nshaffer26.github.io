@@ -1,10 +1,14 @@
 #ImgMe {
   float: none;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 85%;
+  padding-left: 15%;
+  padding-right: 15%;
+  width: 70%;
   height: inherit;
+}
+#AboutDiv {
+  padding-top: 10px;
+
 }
 body {
   padding-left: 0px;
