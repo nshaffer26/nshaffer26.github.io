@@ -1,10 +1,9 @@
 #ImgMe {
   float: top;
-  width: 100%;
+  width: 75%;
   height: inherit;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 body {
   padding-left: 0px;
