@@ -16,15 +16,23 @@
   padding-right: 10%;
   padding-left: 5%;
 }
+#Proj {
+  padding-left: 5%;
+}
 body {
   padding-left: 2%;
   padding-right: 2%;
 }
-ul, p, div {
+#List, p, div {
   font-size: 120%;
 }
 button {
   width: 100px;
   height: 50px;
   font-size: 100%;
+}
+video {
+  width: 50%;
+  height: inherit;
+  padding-bottom: 25px;
 }
