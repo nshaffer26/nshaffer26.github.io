@@ -31,8 +31,6 @@ button {
   height: 50px;
   font-size: 100%;
 }
-video {
-  width: 50%;
-  height: inherit;
+iframe {
   padding-bottom: 25px;
 }
