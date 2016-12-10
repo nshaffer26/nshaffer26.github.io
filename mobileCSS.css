@@ -14,3 +14,8 @@ body {
   padding-left: 0px;
   padding-right: 0px;
 }
+button {
+  width: 25%;
+  height: 50px;
+  font-size: 100%;
+}
