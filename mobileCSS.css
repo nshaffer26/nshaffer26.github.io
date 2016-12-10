@@ -12,7 +12,6 @@ iframe {
 }
 #AboutDiv {
   padding-top: 10px;
-
 }
 body {
   padding-left: 0px;
@@ -20,6 +19,6 @@ body {
 }
 button {
   width: 100%;
-  height:auto;
+  height: 25px;
   font-size: 60%;
 }
