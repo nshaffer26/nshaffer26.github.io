@@ -22,6 +22,32 @@
 		free to send me an email. I will do my best to repair the issue!
   </div>
 	<div id="Proj">
+		<button id="download">Download</button>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <script type="text/javascript">
+
+     $('#download').click(function() {
+       download("/Images/Blue-Tile.PNG","/Images/Red-Tile.PNG","/Images/Yellow-Tile.PNG","/Images/Yellow-Tile.PNG","/Images/Tile-0.png","/Images/Tile-1.png","/Images/Tile-2.png","/Images/Tile-3.png","/Images/Tile-4.png","/Images/Tile-5.png");
+     });
+
+     var download = function() {
+       for(var i=0; i<arguments.length; i++) {
+         var iframe = $('<iframe style="visibility: collapse;"></iframe>');
+         $('body').append(iframe);
+         var content = iframe[0].contentDocument;
+         var form = '<form action="' + arguments[i] + '" method="GET"></form>';
+         content.write(form);
+         $('form', content).submit();
+         setTimeout((function(iframe) {
+           return function() {
+             iframe.remove();
+           }
+         })(iframe), 2000);
+       }
+     }
+
+  </script>
 	  <h4>Matching Game Version 1: Basic</h4>
 		<a href="/Images/Blue-Tile.PNG" download=""
 			href="/Images/Red-Tile.PNG" download=""
