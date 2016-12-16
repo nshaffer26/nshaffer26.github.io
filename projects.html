@@ -5,55 +5,67 @@
 	<meta name=viewport content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="mystyle.css">
 	<link rel="stylesheet" media="screen and (max-width:600px)" href="mobileCSS.css">
+	<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+	<script src='main.js'></script>
 <!--	<link href="css/bootstrap.min.css" rel="stylesheet"> -->
 </head>
 <body>
-  <h1 id="h01">Nicholas Shaffer</h1>
-	<form>
+  <h1 id="h01">Nicholas Shaffer<div class='hamburger'></div></h1>
+	<form class='buttons'>
 		<button type="button" onClick="window.location='index.html'">Home</button>
 		<button type="button" onClick="window.location='about.html'">About</button>
 		<button type="button" onClick="window.location='contact.html'">Contact</button>
     <button type="button" id="BtnClk" onClick="window.location='projects.html'">Projects</button>
 	</form>
-	<h2>Projects:</h2>
-  <div>
-    Welcome! Here you can find a collection of some of what I have accomplished
-    so far in my career at UB.<!-- If you notice any bugs in any of my programs, feel
-		free to send me an email. I will do my best to repair the issue! -->
-  </div>
-<!-- Implament at later date??
-	<div id="Proj">
-	  <h4>Matching Game Version 1: Basic</h4>
-		<a href="/Images/Blue-Tile.PNG" download=""
-			href="/Images/Red-Tile.PNG" download=""
-			href="/Images/Yellow-Tile.PNG" download=""
-			href="/Images/Tile-0.png" download=""
-			href="/Images/Tile-1.png" download=""
-			href="/Images/Tile-2.png" download=""
-			href="/Images/Tile-3.png" download=""
-			href="/Images/Tile-4.png" download=""
-			href="/Images/Tile-5.png" download="">Cl to play!</a>
-		<a href="Lab11 Website Version1.jar">Click to play!</a>
-		 ******Insert JavaScript code to display game on webpage at a later date?
-  </div>
-	<div id="Proj">
-	  <h4>Matching Game Version 2: Levels</h4>
-		<a href="Lab11 Website Version2.jar">Click to play!</a>
-		 ******Insert JavaScript code to display game on webpage at a later date?
-  </div>
--->
-	<h3>Protocols: What are they?</h3>
-  <div id="Proj">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/v2iAwoZyBQw" frameborder="0" allowfullscreen></iframe>
-  </div>
-	<h3>IPv4: What is it?</h3>
-  <div id="Proj">
-	  <iframe width="560" height="315" src="https://www.youtube.com/embed/Nh0jWrORfdM" frameborder="0" allowfullscreen></iframe>
-  </div>
-	<h3>What is a computer virus?</h3>
-	<div id="Proj">
-	  <iframe width="560" height="315" src="https://www.youtube.com/embed/La4nucOcyNM" frameborder="0" allowfullscreen></iframe>
-  </div>
-	<p><a href="index.html">Home</p></a>
+	<div class='menu'>
+		<ul>
+	    <a href="index.html"><li>Home</li></a>
+	    <a href="about.html"><li>About</li></a>
+	    <a href="contact.html"><li>Contact</li></a>
+	    <a href="projects.html"><li>Projects</li></a>
+  	</ul>
+	</div>
+	<div class='page'>
+		<h2>Projects:</h2>
+	  <div>
+	    Welcome! Here you can find a collection of some of what I have accomplished
+	    so far in my career at UB.<!-- If you notice any bugs in any of my programs, feel
+			free to send me an email. I will do my best to repair the issue! -->
+	  </div>
+	<!-- Implament at later date??
+		<div id="Proj">
+		  <h4>Matching Game Version 1: Basic</h4>
+			<a href="/Images/Blue-Tile.PNG" download=""
+				href="/Images/Red-Tile.PNG" download=""
+				href="/Images/Yellow-Tile.PNG" download=""
+				href="/Images/Tile-0.png" download=""
+				href="/Images/Tile-1.png" download=""
+				href="/Images/Tile-2.png" download=""
+				href="/Images/Tile-3.png" download=""
+				href="/Images/Tile-4.png" download=""
+				href="/Images/Tile-5.png" download="">Cl to play!</a>
+			<a href="Lab11 Website Version1.jar">Click to play!</a>
+			 ******Insert JavaScript code to display game on webpage at a later date?
+	  </div>
+		<div id="Proj">
+		  <h4>Matching Game Version 2: Levels</h4>
+			<a href="Lab11 Website Version2.jar">Click to play!</a>
+			 ******Insert JavaScript code to display game on webpage at a later date?
+	  </div>
+	-->
+		<h3>Protocols: What are they?</h3>
+	  <div id="Proj">
+	    <iframe width="560" height="315" src="https://www.youtube.com/embed/v2iAwoZyBQw" frameborder="0" allowfullscreen></iframe>
+	  </div>
+		<h3>IPv4: What is it?</h3>
+	  <div id="Proj">
+		  <iframe width="560" height="315" src="https://www.youtube.com/embed/Nh0jWrORfdM" frameborder="0" allowfullscreen></iframe>
+	  </div>
+		<h3>What is a computer virus?</h3>
+		<div id="Proj">
+		  <iframe width="560" height="315" src="https://www.youtube.com/embed/La4nucOcyNM" frameborder="0" allowfullscreen></iframe>
+	  </div>
+		<p><a href="index.html">Home</p></a>
+	</div>
 </body>
 </html>

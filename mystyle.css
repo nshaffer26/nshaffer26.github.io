@@ -20,9 +20,6 @@ body {
   padding-left: 2%;
   padding-right: 2%;
 }
-p, div {
-  font-size: 120%;
-}
 button {
   width: 100px;
   height: 50px;
@@ -30,4 +27,28 @@ button {
 }
 iframe {
   padding-bottom: 25px;
+}
+.hamburger {
+  width:30px;
+  height:4px;
+  background-color:white;
+  border-radius:5px;
+  position:absolute;
+  float:right;
+  right: 20px;
+  top: 52px;
+}
+.hamburger:after, .hamburger:before {
+  content: '';
+  width: 100%;
+  height:4px;
+  background-color:white;
+  position:absolute;
+  border-radius:5px;
+}
+.hamburger:after {
+  top:10px;
+}
+.hamburger:before {
+  top:20px;
 }
