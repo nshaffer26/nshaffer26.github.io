@@ -20,6 +20,9 @@ body {
   padding-left: 2%;
   padding-right: 2%;
 }
+div {
+  font-size: 120%;
+}
 button {
   width: 100px;
   height: 50px;
