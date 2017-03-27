@@ -61,6 +61,8 @@ iframe {
   padding: 0;
   overflow: hidden;
   border: 1px solid #bbb;
+  position: absolute;
+  right: 1.5%;
 }
 .dropdown li a {
   display: block;
