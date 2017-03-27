@@ -1,13 +1,12 @@
 function main() {
-  $('.hamburger').hide();
-  $('.menu').hide();
+  $('.dropdown').hide();
+  $('.menuMobile').hide();
   if($(window).width() <= 600){
-    $('.hamburger').show();
-    $('.buttons').hide();
-    $('.hamburger').on('click', function() {
+    $('.menu').hide();
+    $('.menuMobile').show();
+    $('.dropButton').on('click', function() {
       //$(this).next().toggle();
-      $('.page').toggle();
-      $('.menu').toggle();
+      $('.dropdown').toggle();
     });
   }
 }

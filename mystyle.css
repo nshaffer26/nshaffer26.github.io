@@ -1,13 +1,5 @@
-#h01 {
-  background-color:navy;
-  color: white;
-  padding-top:25px;
-  padding-bottom:25px;
-  padding-left:15px;
-}
 #BtnClk {
-  background-color: navy;
-  color: white;
+  background-color: #333
 }
 #ImgMe {
   float: right;
@@ -31,27 +23,57 @@ button {
 iframe {
   padding-bottom: 25px;
 }
-.hamburger {
-  width:30px;
-  height:4px;
-  background-color:white;
-  border-radius:5px;
-  position:absolute;
+.menu ul, .menuMobile ul, .menuMobile button {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: navy;
+  border: none;
+}
+.menu li, .menuMobile li {
+  float: right;
+  border-left: 1px solid #bbb;
+}
+.menu li:last-child, .menuMobile li:last-child {
+  float: left;
+  border-left: none;
+}
+.menu li div, .menuMobile li div {
+  font-weight: bold;
+}
+.menu li a, .menu li div, .menuMobile li button, .menuMobile li div {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.menu li a:hover:not(#BtnClk), .menuMobile li button:hover {
+  background-color: white;
+  color: navy;
+}
+.dropdown ul {
   float:right;
-  right: 20px;
-  top: 52px;
+  width: 200px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #bbb;
 }
-.hamburger:after, .hamburger:before {
-  content: '';
-  width: 100%;
-  height:4px;
-  background-color:white;
-  position:absolute;
-  border-radius:5px;
+.dropdown li a {
+  display: block;
+  color: white;
+  background-color:navy;
+  padding: 8px 16px;
+  text-decoration: none;
 }
-.hamburger:after {
-  top:10px;
+.dropdown li {
+  right: 0;
+  text-align: right;
+  border-bottom: 1px solid #bbb;
 }
-.hamburger:before {
-  top:20px;
+.dropdown li:last-child {
+  border-bottom: none;
 }
