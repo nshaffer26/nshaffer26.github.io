@@ -42,28 +42,29 @@ iframe {
 .menu li div, .menuMobile li div {
   font-weight: bold;
 }
-.menu li a, .menu li div, .menuMobile li button, .menuMobile li div {
+.menu li a, .menu li div, .menuMobile li div {
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-size: 26px;
 }
-.menu li a:hover:not(#BtnClk), .menuMobile li button:hover {
+.menu li a:hover:not(#BtnClk) {
   background-color: white;
   color: navy;
 }
 .dropdown ul {
-  float:right;
+  float: right;
   width: 200px;
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  border: 1px solid #bbb;
   position: absolute;
-  right: 1.5%;
+  right: 8px;
 }
+
 .dropdown li a {
   display: block;
   color: white;
@@ -74,8 +75,5 @@ iframe {
 .dropdown li {
   right: 0;
   text-align: right;
-  border-bottom: 1px solid #bbb;
-}
-.dropdown li:last-child {
-  border-bottom: none;
+  border-top: 1px solid #bbb;
 }

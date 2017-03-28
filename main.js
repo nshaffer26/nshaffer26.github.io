@@ -1,6 +1,6 @@
 function main() {
-  $('.dropdown').hide();
   $('.menuMobile').hide();
+  $('.dropdown').hide();
   if($(window).width() <= 600){
     $('.menu').hide();
     $('.menuMobile').show();
