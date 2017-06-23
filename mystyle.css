@@ -1,9 +1,8 @@
 #BtnClk {
   background-color: #333
 }
-#ImgMe {
+#ImgMe, #ImgJulia {
   float: right;
-  width: 25%;
   height: inherit;
   padding-right: 10%;
   padding-left: 5%;
