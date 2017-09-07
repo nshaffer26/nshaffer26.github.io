@@ -22,6 +22,9 @@ button {
 iframe {
   padding-bottom: 25px;
 }
+.hide {
+  display: none;
+}
 .menu ul, .menuMobile ul, .menuMobile button {
   list-style-type: none;
   margin: 0;

@@ -1,8 +1,9 @@
 function main() {
-  $('.menuMobile').hide();
-  $('.dropdown').hide();
+  //$('.menuMobile').hide();
+  //$('.dropdown').hide();
   $('.moveToDesktop').hide();
   if($(window).width() <= 600){
+    $("div#hidden").removeClass("hidden");
     $('.download').hide();
     $('.moveToDesktop').show();
     $('.menu').hide();
