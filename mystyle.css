@@ -14,11 +14,6 @@ body {
 div {
   font-size: 20px;
 }
-button {
-  width: 100px;
-  height: 50px;
-  font-size: 100%;
-}
 iframe {
   padding-bottom: 25px;
 }
@@ -58,7 +53,7 @@ iframe {
 }
 .dropdown ul {
   float: right;
-  width: 200px;
+  width: 50%;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -73,6 +68,7 @@ iframe {
   background-color:navy;
   padding: 8px 16px;
   text-decoration: none;
+  font-size: 26px;
 }
 .dropdown li {
   right: 0;
