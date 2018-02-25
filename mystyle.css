@@ -1,7 +1,7 @@
 #activePg {
   background-color: #333
 }
-#ImgMe, #ImgJulia {
+#ImgMe, #ImgJulia, #ImgSkyline {
   float: right;
   height: inherit;
   padding-right: 10%;
@@ -16,6 +16,20 @@ div {
 }
 iframe {
   padding-bottom: 25px;
+}
+.Proj {
+  padding-bottom: 20%;
+}
+.divide {
+  background-color: black;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 1px;
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+.DMS110List li {
+  list-style: none;
 }
 .hide {
   display: none;
