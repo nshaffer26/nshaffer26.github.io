@@ -7,6 +7,7 @@ function main() {
     $('.download').hide();
     $('.moveToDesktop').show();
     $('.menu').hide();
+    $('.DMS110Menu').show();
     $('.menuMobile').show();
     $('.dropButton').on('click', function() {
       //$(this).next().toggle();
