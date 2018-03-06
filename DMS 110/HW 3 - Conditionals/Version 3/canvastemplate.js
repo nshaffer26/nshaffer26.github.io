@@ -110,7 +110,7 @@ function setup() {
 
 //DRAW FUNCTION : EXECUTED REPEATEDLY - UNTIL YOU QUIT THE PROGRAM
 function draw() {
-	ctx.fillStyle = "rgb(255,255,255)";
+	ctx.fillStyle = "rgb(0,0,0)";
 	ctx.fillRect(0,0,cv.width,cv.height);
 
 	//Large Circles
@@ -139,8 +139,8 @@ function draw() {
 	y6 = y6 + y6s;	y6s = speedBigY(y6,y6s);
 
 	//Lines
-	ctx.strokeStyle = "rgb(0,0,0)";
-	ctx.lineWidth = 0.5;
+	ctx.strokeStyle = "rgb(255,255,255)";
+	ctx.lineWidth = 1;
 	ctx.beginPath();
 	ctx.moveTo(x1x1,y1y1);
 	ctx.lineTo(x2x1,y2y1);

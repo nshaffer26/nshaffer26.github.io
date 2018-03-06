@@ -18,7 +18,7 @@ var bErase,bBlack,bR,bY,bG,bB;
 //var undo = [];
 
 function setup() {
-	ctx.canvas.width  = window.innerWidth; 
+	ctx.canvas.width  = window.innerWidth;
 	ctx.canvas.height = window.innerHeight;
 	r = 0;
 	g = 0;
