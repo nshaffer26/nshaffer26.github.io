@@ -2,7 +2,7 @@ function main() {
   //$('.menuMobile').hide();
   //$('.dropdown').hide();
   $('.moveToDesktop').hide();
-  if($(window).width() <= 600){
+  if($(window).width() <= 600) {
     $("div#hidden").removeClass("hidden");
     $('.download').hide();
     $('.moveToDesktop').show();
@@ -13,6 +13,9 @@ function main() {
       //$(this).next().toggle();
       $('.dropdown').toggle();
     });
+  }
+  else {
+    $("p#hidden").addClass("hidden");
   }
 }
 $(document).ready(main);

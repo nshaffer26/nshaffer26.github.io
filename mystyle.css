@@ -23,7 +23,9 @@ a {
   font-style: italic;
   text-decoration: none;
 }
-
+.hidden {
+  display: none;
+}
 .Proj {
   padding-bottom: 20%;
 }
