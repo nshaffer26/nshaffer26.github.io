@@ -17,13 +17,20 @@ div {
 iframe {
   padding-bottom: 25px;
 }
+a {
+  color: navy;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: none;
+}
+
 .Proj {
   padding-bottom: 20%;
 }
 .divide {
   background-color: black;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 3%;
+  margin-right: 3%;
   height: 1px;
   margin-top: 2%;
   margin-bottom: 5%;
