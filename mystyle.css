@@ -28,8 +28,8 @@ iframe {
   margin-top: 2%;
   margin-bottom: 5%;
 }
-.DMS110List li {
-  list-style: none;
+.noBullets li {
+  /* list-style: none; */
 }
 .hide {
   display: none;
