@@ -31,8 +31,6 @@ function setup() {
 
 	w = (cv.width-(numR*s))/(numR-1);
 	h = (cv.height-(numC*s))/(numC-1);
-	console.log(w);
-	console.log(h);
 }
 
 //DRAW FUNCTION : EXECUTED REPEATEDLY - UNTIL YOU QUIT THE PROGRAM
