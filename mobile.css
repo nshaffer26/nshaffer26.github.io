@@ -1,0 +1,35 @@
+body {
+	margin-left: 2%;
+	margin-right: 2%
+}
+
+#dropButton {
+	float: right;
+}
+
+.content #DMS110Proj {
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+.disableImgLink {
+	text-align: center;
+	background-color: rgb(180, 180, 180);
+}
+
+.content #imgMe {
+	width: 70%;
+	display: block;
+	float: none;
+	padding-left: 15%;
+  	padding-right: 15%;
+  	padding-top: 2%;
+}
+.content img.projImg {
+	width: 85%;
+	display: block;
+	float: none;
+	padding-left: 7%;
+	padding-right: 7%;
+	padding-bottom: 10px;
+}
