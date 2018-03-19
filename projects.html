@@ -1,88 +1,82 @@
 <!doctype html>
 <html>
-<head>
-	<title>Projects</title>
-	<link rel="shortcut icon" href="Images/Tab Icon.PNG" type="image/png">
-	<meta name=viewport content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="mystyle.css">
-	<link rel="stylesheet" media="screen and (max-width:600px)" href="mobileCSS.css">
-	<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
-	<script src='main.js'></script>
-	<!--	<link href="css/bootstrap.min.css" rel="stylesheet">  -->
-</head>
-<body>
-	<div class='menu'>
-		<ul>
-	    <li><a href="projects.html" id="activePg">Projects</a></li>
-			<li><a href="contact.html">Contact</a></li>
-			<li><a href="resume.html">Resume</a></li>
-			<li><a href="index.html">Home</a></li>
-			<li><div>Nicholas Shaffer</div></li>
-  	</ul>
-	</div>
-	<div id="hidden" class='menuMobile hide'>
-		<ul>
-			<li><div class="dropButton">Menu</div></li>
-		  <li><div>Nicholas Shaffer</div></li>
-		</ul>
-	</div>
-	<div id="hidden" class='dropdown hide'>
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="resume.html">Resume</a></li>
-			<li><a href="contact.html">Contact</a></li>
-			<li><a href="projects.html">Projects</a></li>
-		</ul>
-	</div>
-	<div class='page' id="top">
-		<h2>Projects:</h2>
-	  <div>
-	   <!-- <p>
-				Welcome! Here you can find a collection of some of what I have accomplished
-	    	so far in my career at UB. If you notice any bugs in any of my programs,
-				feel free to send me an email. I will do my best to repair the issue!
-			</p> -->
-			<ul>
-				<li><a href="#Fractals">Fractals</a></li>
-	      <li><a href="#DMS110">DMS 110</a></li>
-			</ul>
-	  </div>
+	<head>
+		<title>Projects</title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Nicholas Shaffer">
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="styles.css"/>
+		<link rel="stylesheet" media="screen and (max-width:750px)" href="mobile.css">
+		<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<div class="page">
+			<div class="header">
+				<div class="menu">
+					<ul class="mobileHide">
+						<li> <div>Nicholas Shaffer</div> </li>
+						<li> <a href="projects.html" id="active">Projects</a> </li>
+						<li> <a href="contact.html">Contact</a> </li>
+						<li> <a href="resume.html">Resume</a> </li>
+						<li> <a href="index.html">Home</a> </li>
+					</ul>
+					<ul class="mobileShow">
+						<li> <div>Nicholas Shaffer</div> </li>
+						<li> <div id="dropButton">Menu</div> </li>
+					</ul>
+				</div>
+				<div class="dropdown">
+					<ul>
+						<li> <a href="index.html">Home</a> </li>
+						<li> <a href="resume.html">Resume</a> </li>
+						<li> <a href="contact.html">Contact</a> </li>
+						<li> <a href="projects.html">Projects</a> </li>
+					</ul>
+				</div>
+			</div>
+			<div class="content">
+				<h2>Projects:</h2>
+				<div id="resizeFont">
+					<ul>
+						<li><a href="#Fractals">Fractals</a></li>
+						<li><a href="#DMS110">DMS 110</a></li>
+					</ul>
+			  	</div>
 
-<!-- ***Insert Matching Game*** -->
-		<!-- <div class='divide'></div> -->
-		<div class="Proj" id="Fractals">
-		  <h3>Fractals</h3>
-			<img id="ImgJulia" src="Images\Julia.PNG" width="40%" alt="Julia Set">
-			<h4>About:</h4>
-			<p id="AboutDiv">
-				This program is the result of a collaboration between myself and two
-				other UB students during my first semester at UB. In addition, it uses
-				some classes and libraries developed by an instructor. In it, you can
-				generate four different types of fractals	and make multiple changes to
-				the way they look and are generated. You can even zoom by clicking and
-				dragging the mouse.
-			</p>
-			<div class="download"><a href="Fractals.jar">Click here</a> to download.</div>
-			<div class="moveToDesktop">To use this program, please move to a desktop.</div>
-	  </div>
+				<div class="Proj" id="Fractals">
+					<h3>Fractals</h3>
+					<img class="projImg" src="Images\Julia.PNG" alt="Julia Set">
+					<h3>About:</h3>
+					<p>
+						This program is the result of a collaboration between myself and two
+						other UB students during my first semester at UB. In addition, it uses
+						some classes and libraries developed by an instructor. In it, you can
+						generate four different types of fractals	and make multiple changes to
+						the way they look and are generated. You can even zoom by clicking and
+						dragging the mouse.
+					</p>
+					<br>
+					<div id="resizeFont" class="mobileHide"><a href="Downloads/Fractals.jar">Click here</a> to download.</div>
+					<p class="mobileShow">To use this program, please move to a desktop.</p>
+			  	</div>
 
-		<p><a href="projects.html">Top</a></p>
-		<div class='divide'></div>
+				<div class='divide'></div>
 
-		<div class='Proj' id="DMS110">
-			<h3>DMS 110</h3>
-			<img id="ImgSkyline" src="Images\Skyline.PNG" width="40%" alt="Skyline">
-			<h4>About:</h4>
-			<p id="AboutDiv">
-				Here, you can find a collection of projects I made for the "Programming For
-				Digital Art" class at UB. I took this class in my sophomore year at UB. This
-				class is designed to show ways in which programming can be used to create "new,
-				interactive, digital meda art."
-			</p>
-			<div><a href="DMS110_Projects.html">Click here</a> to view</div>
+				<div class='Proj' id="DMS110">
+					<h3>DMS 110</h3>
+					<img class="projImg" src="Images\Skyline.PNG" alt="Skyline">
+					<h3>About:</h3>
+					<p>
+						Here, you can find a collection of projects I made for the "Programming For
+						Digital Art" class at UB. I took this class in my sophomore year at UB. This
+						class is designed to show ways in which programming can be used to create "new,
+						interactive, digital meda art."
+					</p>
+					<br>
+					<div id="resizeFont"><a href="DMS110_Projects.html">Click here</a> to view</div>
+				</div>
+			</div>
 		</div>
-		<p><a href="projects.html">Top</a></p>
-		<p><a href="index.html">Home</a></p>
-	</div>
-</body>
+	</body>
 </html>
