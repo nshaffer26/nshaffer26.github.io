@@ -62,19 +62,19 @@ body {
 }
 .content a {
 	color: DodgerBlue;
-  	font-weight: bold;
-  	font-style: italic;
-  	text-decoration: none;
+	font-weight: bold;
+	font-style: italic;
+	text-decoration: none;
 }
 
 
 .divide {
-	height: 3px;
-  	margin-left: 3%;
+	height: 10px;
+	margin-left: 3%;
 	margin-right: 3%;
-  	margin-top: 10%;
-  	margin-bottom: 10%;
-  	background-color: rgb(120, 120, 120);
+	margin-top: 10%;
+	margin-bottom: 10%;
+	background-color: rgb(180, 180, 180);
 }
 
 
@@ -84,9 +84,14 @@ body {
 	padding-left: 10%;
 }
 .content img.projImg {
+	display: block;
 	width: 50%;
 	float: right;
 	padding-left: 5%;
+}
+#MatchingGame img {
+	width: 30%;
+	padding-right: 8%;
 }
 
 
