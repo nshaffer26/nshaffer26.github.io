@@ -97,7 +97,7 @@ function draw() {
 			count++;
 		}
 	}
-	else {
+	else if(index == 2) {
 		var count = 0;
 		for(var i = 0; i < cv.width; i += sz) {
 			for(var j = 0; j < cv.height; j += sz) {
@@ -118,12 +118,103 @@ function draw() {
 			count++;
 		}
 	}
+	else {
+		ctx.fillStyle = "rgb(0,0,0)";
+		ctx.fillRect(0,0,cv.width,cv.height);
+		ctx.strokeStyle = "rgb(255,255,255)";
+		var count = 0;
+		var dist = 30;
+		ctx.lineWidth = 2;
+
+		//Setup
+		ctx.beginPath();
+		ctx.moveTo(0,0);
+		ctx.lineTo(cv.width,0);
+		ctx.lineTo(cv.width,cv.height);
+		ctx.lineTo(0,cv.height);
+		ctx.lineTo(0,0);
+		ctx.stroke();
+
+		//Center-Top-Left
+		count = cv.height/2;
+		for(var i = 0; i < cv.width/2; i += cv.width/dist) {
+			ctx.beginPath();
+			ctx.moveTo(i,cv.height/2);
+			ctx.lineTo(cv.width/2,count);
+			ctx.stroke();
+			count = count - cv.height/dist;
+		}
+		//Center-Top-Right
+		count = cv.width/2;
+		for(var i = 0; i < cv.height/2; i += cv.height/dist) {
+			ctx.beginPath();
+			ctx.moveTo(cv.width/2,i);
+			ctx.lineTo(count,cv.height/2);
+			ctx.stroke();
+			count = count + cv.width/dist;
+		}
+		//Center-Bottom-Right
+		count = cv.height/2;
+		for(var i = cv.width; i > cv.width/2; i -= cv.width/dist) {
+			ctx.beginPath();
+			ctx.moveTo(i,cv.height/2);
+			ctx.lineTo(cv.width/2,count);
+			ctx.stroke();
+			count = count + cv.height/dist;
+		}
+		//Center-Bottom-Left
+		count = cv.width/2;
+		for(var i = cv.height; i > cv.height/2; i -= cv.height/dist) {
+			ctx.beginPath();
+			ctx.moveTo(cv.width/2,i);
+			ctx.lineTo(count,cv.height/2);
+			ctx.stroke();
+			count = count - cv.width/dist;
+		}
+
+		//Top-Left
+		count = 0;
+		for(var i = cv.width/2; i > 0; i -= cv.width/dist) {
+			ctx.beginPath();
+			ctx.moveTo(i,0);
+			ctx.lineTo(0,count);
+			ctx.stroke();
+			count = count + cv.height/dist;
+		}
+		//Top-Right
+		count = 0;
+		for(var i = cv.width/2; i < cv.width; i += cv.width/dist) {
+			ctx.beginPath();
+			ctx.moveTo(i,0);
+			ctx.lineTo(cv.width,count);
+			ctx.stroke();
+			count = count + cv.height/dist;
+		}
+		//Bottom-Right
+		count = cv.height;
+		for(var i = cv.width/2; i < cv.width; i += cv.width/dist) {
+			ctx.beginPath();
+			ctx.moveTo(i,cv.height);
+			ctx.lineTo(cv.width,count);
+			ctx.stroke();
+			count = count - cv.height/dist;
+		}
+		//Bottom-Left
+		count = cv.height;
+		for(var i = cv.width/2; i > 0; i -= cv.width/dist) {
+			ctx.beginPath();
+			ctx.moveTo(i,cv.height);
+			ctx.lineTo(0,count);
+			ctx.stroke();
+			count = count - cv.height/dist;
+		}
+	}
 }
 
 /*Event Functions*/
 function mouseDown() {
 	index++;
-	if(index > 2) {
+	if(index > 3) {
 		index = 0;
 	}
 }
