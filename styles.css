@@ -21,7 +21,7 @@ body {
 	padding: 0;
 	list-style: none;
 }
-.header .menu li a {
+.header .menu li a, #dropButton {
 	display: block;
 	float: right;
 	margin-left: 5%;
@@ -31,7 +31,7 @@ body {
 	font-size: 20px;
 	text-decoration: none;
 }
-.header .menu li:first-child, #dropButton {
+.header .menu li:first-child {
 	display: block;
 	float: left;
 	padding-top: 35px;
