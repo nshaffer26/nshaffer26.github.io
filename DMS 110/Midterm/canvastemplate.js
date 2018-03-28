@@ -6,6 +6,11 @@ var ctx = cv.getContext("2d");
 ///////////////////////////////////////////
 //SETUP FUNCTION : EXECUTED ONLY ONCE
 
+var winMusic = document.getElementById("win");
+var playedWin = false;
+var music = document.getElementById("music");
+var musicOn = false;
+
 var mouseX, mouseY;
 var keyPressed;
 var pressedKey;
@@ -21,6 +26,7 @@ var bw = 200;
 var bh = 30;
 var pl = 120;
 var initial = true;
+var hitPlatform = false;
 
 var cr = 15;
 var cx,cy;
@@ -38,6 +44,12 @@ function setup() {
 }
 
 function draw() {
+	if(musicOn) {
+		music.play();
+	}
+	else {
+		music.pause();
+	}
 	if(lives != 0) {
 		if(level == 0) {
 			start();
@@ -117,6 +129,7 @@ function draw() {
 			cy = cv.height/2;
 			csx = Math.abs(csx);
 			csy = Math.abs(csy);
+			hitPlatform = false;
 		}
 		if(cx >= mouseX-(pl/2) && cx <= mouseX+(pl/2) && cy >= cv.height-90-cr && cy <= cv.height-70+cr) {
 			if( (cx >= mouseX-(pl/2) && cx <= (mouseX-(pl/2) + pl/3)) || (cx >= (mouseX+(pl/2) - pl/3) && cx <= mouseX+(pl/2)) ) {
@@ -135,12 +148,16 @@ function draw() {
 					csx = -3;
 				}
 			}
-			csy = csy * -1;
+			if(!hitPlatform) {
+				csy = csy * -1;
+				hitPlatform = true;
+			}
 		}
 		for(var i = 0; i < blocks.length; i+=2) {
 			if(cx >= blocks[i] && cx <= blocks[i]+bw && cy >= blocks[i+1]-cr && cy <= blocks[i+1]+bh+cr) {
 				csy = csy * -1;
 				blocks.splice(i,2);
+				hitPlatform = false;
 			}
 		}
 		cx = cx + csx;
@@ -151,11 +168,20 @@ function draw() {
 /*Event Functions*/
 function mouseDown() {
 	if(level == 0) {
-		if(mouseX >= cv.width/2-75 && mouseX <= cv.width/2+75 && mouseY >= cv.height/2-70 && mouseY <= cv.height/2-20) {
+		if(mouseX >= cv.width/2-75 && mouseX <= cv.width/2+75 && mouseY >= cv.height/2-120 && mouseY <= cv.height/2-70) {
 			level = 1;
 		}
-		else if(mouseX >= cv.width/2-75 && mouseX <= cv.width/2+75 && mouseY >= cv.height/2+20 && mouseY <= cv.height/2+70) {
+		else if(mouseX >= cv.width/2-75 && mouseX <= cv.width/2+75 && mouseY >= cv.height/2-30 && mouseY <= cv.height/2+20) {
 			level = 0.5;
+		}
+		else if(mouseX >= cv.width/2+30 && mouseX <= cv.width/2+75 && mouseY >= cv.height/2+60 && mouseY <= cv.height/2+110) {
+			if(musicOn) {
+				musicOn = false;
+			}
+			else {
+				musicOn = true;
+				music.load();
+			}
 		}
 	}
 	else if(level == 0.5) {
@@ -177,6 +203,7 @@ function mouseDown() {
 			lives = 3;
 			blocks = [];
 			initial = true;
+			playedWin = false;
 		}
 	}
 }
@@ -197,7 +224,7 @@ function start() {
 
 	ctx.beginPath();
 	ctx.fillStyle = "rgb(220,220,220)";
-	ctx.rect(cv.width/2-150,cv.height/2-150,300,300);
+	ctx.rect(cv.width/2-150,cv.height/2-200,300,400);
 	ctx.stroke();
 	ctx.fill();
 	ctx.closePath();
@@ -205,19 +232,30 @@ function start() {
 	ctx.beginPath();
 	ctx.fillStyle = "rgb(255,255,255)";
 	//Start
-	ctx.rect(cv.width/2-75,cv.height/2-70,150,50);
+	ctx.rect(cv.width/2-75,cv.height/2-120,150,50);
 	//Instructions
-	ctx.rect(cv.width/2-75,cv.height/2+20,150,50);
+	ctx.rect(cv.width/2-75,cv.height/2-30,150,50);
+	//Sound
+	ctx.rect(cv.width/2-75,cv.height/2+60,150,50);
 	ctx.stroke();
 	ctx.fill();
+	ctx.closePath();
+	ctx.beginPath();
+	ctx.moveTo(cv.width/2+30,cv.height/2+60);
+	ctx.lineTo(cv.width/2+30,cv.height/2+110);
+	ctx.stroke();
 	ctx.closePath();
 
 	ctx.font = "20px Arial";
 	ctx.fillStyle = "rgb(0,0,0)";
-	ctx.fillText("         Start",cv.width/2-75,cv.height/2-38);
-	ctx.font = "20px Arial";
-	ctx.fillStyle = "rgb(0,0,0)";
-	ctx.fillText("    Instructions",cv.width/2-75,cv.height/2+52);
+	ctx.fillText("         Start",cv.width/2-75,cv.height/2-88);
+	ctx.fillText("    Instructions",cv.width/2-75,cv.height/2+2);
+	if(!musicOn) {
+		ctx.fillText("     Music      Off",cv.width/2-75,cv.height/2+92);
+	}
+	else {
+		ctx.fillText("     Music      On",cv.width/2-75,cv.height/2+92);
+	}
 }
 
 function instructions() {
@@ -447,8 +485,22 @@ function gameOver() {
 }
 
 function win() {
-	ctx.fillStyle = "rgb(255,255,255)";
+	if(!playedWin) {
+		musicOn = false;
+		music.load();
+		winMusic.play();
+		playedWin = true;
+	}
+	ctx.fillStyle = "rgb(255,0,0)";
 	ctx.fillRect(0,0,cv.width,cv.height);
+	ctx.fillStyle = "rgb(255,255,255)";
+	ctx.fillRect(cv.width/14,cv.height/14,12*cv.width/14,12*cv.height/14);
+	ctx.fillStyle = "rgb(0,255,0)";
+	ctx.fillRect(cv.width/10,cv.height/10,8*cv.width/10,8*cv.height/10);
+	ctx.fillStyle = "rgb(255,255,255)";
+	ctx.fillRect(cv.width/8,cv.height/8,6*cv.width/8,6*cv.height/8);
+	ctx.fillStyle = "rgb(0,0,255)";
+	ctx.fillRect(cv.width/5,cv.height/5,3*cv.width/5,3*cv.height/5);
 	ctx.strokeStyle = "rgb(0,0,0)";
 	ctx.lineWidth = 5;
 
