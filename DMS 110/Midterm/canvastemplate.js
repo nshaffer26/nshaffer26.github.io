@@ -122,8 +122,9 @@ function draw() {
 		}
 		if(cy <= 30+cr) {
 			csy = csy * -1;
+			hitPlatform = false;
 		}
-		if(cy >= cv.height-cr) {
+		if(cy >= cv.height-30) {
 			--lives;
 			cx = cv.width/2;
 			cy = cv.height/2;
