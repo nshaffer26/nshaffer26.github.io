@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 body {
 	margin-left: 10%;
 	margin-right: 10%;
 	background-color: rgb(220, 220, 220);
-	font-family: "Arial";
+	font-family: 'Raleway', sans-serif;
 }
 
 .header .menu {
@@ -21,14 +23,17 @@ body {
 	padding: 0;
 	list-style: none;
 }
+.header .menu li {
+	line-height: 100%;
+}
 .header .menu li a, #dropButton {
 	display: block;
 	float: right;
 	margin-left: 5%;
 	padding-top: 45px;
-	padding-bottom: 5px;
+	padding-bottom: 10px;
 	color: rgb(120, 120, 120);
-	font-size: 20px;
+	font-size: 25px;
 	text-decoration: none;
 }
 .header .menu li:first-child {
@@ -36,7 +41,7 @@ body {
 	float: left;
 	padding-top: 35px;
 	color: rgb(120, 120, 120);
-	font-size: 30px;
+	font-size: 32px;
 }
 .header .menu li a:hover {
 	border-bottom: 2px solid DodgerBlue;
@@ -66,6 +71,9 @@ body {
 	font-style: italic;
 	text-decoration: none;
 }
+.content a:hover {
+	color: rgb(200,0,255);
+}
 
 
 .divide {
@@ -94,21 +102,46 @@ body {
 	padding-right: 8%;
 } */
 
-
-.content #DMS110Proj, .content #DMS110Proj tr {
-	width: 84%;
-	margin-bottom: 8%;
-	margin-left: 8%;
-	margin-right: 8%;
-	border-collapse: collapse;
-}
-.content #DMS110Proj tr td {
-	width: 33%;
-}
-.content #DMS110Proj tr td img {
+div#DMS110projectPage {
 	width: 100%;
-	vertical-align: middle;
+	margin-top: 50px;
 }
+
+div#DMS110projectPage a, #linkFont {
+	text-decoration: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: DodgerBlue;
+}
+div#DMS110projectPage a:hover {
+	color: rgb(200,0,255);
+}
+
+div#DMS110projectPage ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+div#DMS110projectPage li {
+	text-align: center;
+	float: left;
+	list-style: none;
+	width: 33%;
+	height: 250px;
+	/* margin-bottom: 50px; */
+}
+div#DMS110projectPage li.project {
+	width: 100%;
+	height: 400px;
+}
+div#DMS110projectPage li.project img {
+	width: 50%;
+}
+div#DMS110projectPage img {
+	width: 75%;
+}
+
 
 .header .dropdown {
 	height: 100px;
