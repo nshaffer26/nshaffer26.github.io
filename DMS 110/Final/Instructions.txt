@@ -1,0 +1,22 @@
+Instructions:
+Your goal is to get to the end of the
+maze. You will be able to see the whole
+maze at the beginning of the level for
+3 seconds. After this time, the game will
+zoom in on your current location. You can
+zoom in and out throught the game using
+the space bar, but you can only move if you
+are zoomed in.
+
+To start a game, select a difficulty. There
+are 3 difficulties, and their rules are as
+follows:
+   Easy - Zoom in and out as many times as
+     you'd like. This will be the smallest
+     maze.
+   Medium - You can only zoom in and out 5
+     times throught the duration of the
+     maze. This will be a medium sized maze.
+   Hard - You can only zoom in and out 3
+     times. Use them wisely! This will be the
+     largest maze.
