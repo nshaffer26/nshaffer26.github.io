@@ -249,20 +249,21 @@ function instructions() {
 	ctx.fillText("your current location. You can continue to",cv.width/2-195,cv.height/2-125);
 	ctx.fillText("zoom in and out throughout the game using",cv.width/2-195,cv.height/2-105);
 	ctx.fillText("the space bar, but you can only move if you",cv.width/2-195,cv.height/2-85);
-	ctx.fillText("are zoomed in.",cv.width/2-195,cv.height/2-65);
+	ctx.fillText("are zoomed in. To move, click a white block",cv.width/2-195,cv.height/2-65);
+	ctx.fillText("adjacent to your current location.",cv.width/2-195,cv.height/2-45);
 	//Line break
-	ctx.fillText("To start a game, select a difficulty. There",cv.width/2-195,cv.height/2-25);
-	ctx.fillText("are 3 difficulties, and their rules are as",cv.width/2-195,cv.height/2-5);
-	ctx.fillText("follows:",cv.width/2-195,cv.height/2+15);
-	ctx.fillText("   Easy - Zoom in and out as many times as",cv.width/2-195,cv.height/2+35);
-	ctx.fillText("     you'd like. This will be the smallest maze",cv.width/2-195,cv.height/2+55);
-	ctx.fillText("     of the 3 difficulties.",cv.width/2-195,cv.height/2+75);
-	ctx.fillText("   Medium - You can only zoom out 5 times",cv.width/2-195,cv.height/2+95);
-	ctx.fillText("     throughout the duration of the maze.",cv.width/2-195,cv.height/2+115);
-	ctx.fillText("     This will be a medium sized maze.",cv.width/2-195,cv.height/2+135);
-	ctx.fillText("   Hard - You can only zoom out 3 times.",cv.width/2-195,cv.height/2+155);
-	ctx.fillText("     Use them wisely! This will be the",cv.width/2-195,cv.height/2+175);
-	ctx.fillText("     largest maze.",cv.width/2-195,cv.height/2+195);
+	ctx.fillText("To start a game, select a difficulty. There",cv.width/2-195,cv.height/2-5);
+	ctx.fillText("are 3 difficulties, and their rules are as",cv.width/2-195,cv.height/2+15);
+	ctx.fillText("follows:",cv.width/2-195,cv.height/2+35);
+	ctx.fillText("   Easy - Zoom in and out as many times as",cv.width/2-195,cv.height/2+55);
+	ctx.fillText("     you'd like. This will be the smallest maze",cv.width/2-195,cv.height/2+75);
+	ctx.fillText("     of the 3 difficulties.",cv.width/2-195,cv.height/2+95);
+	ctx.fillText("   Medium - You can only zoom out 5 times",cv.width/2-195,cv.height/2+115);
+	ctx.fillText("     throughout the duration of the maze.",cv.width/2-195,cv.height/2+135);
+	ctx.fillText("     This will be a medium sized maze.",cv.width/2-195,cv.height/2+155);
+	ctx.fillText("   Hard - You can only zoom out 3 times.",cv.width/2-195,cv.height/2+175);
+	ctx.fillText("     Use them wisely! This will be the",cv.width/2-195,cv.height/2+195);
+	ctx.fillText("     largest maze.",cv.width/2-195,cv.height/2+215);
 
 	ctx.beginPath();
 	ctx.fillStyle = "rgb(255,255,255)";
