@@ -9,7 +9,17 @@ body {
 }
 
 div#DMS110projectPage li {
-	width: 50%;
+	width: 100%;
+	height: 250px;
+	padding-bottom: 50px;
+}
+div#DMS110projectPage li.disableImgLink {
+	width: 80%;
+	padding-bottom: 0px;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 20px;
+	background-color: rgb(210, 210, 210);
 }
 div#DMS110projectPage a, #linkFont {
 	/* font-size: 15px; */
@@ -17,13 +27,15 @@ div#DMS110projectPage a, #linkFont {
 
 .disableImgLink {
 	text-align: center;
-	line-height: 180px;
+	line-height: 250px;
 }
 .disableImgLink a {
 	background-color: rgb(180, 180, 180);
 }
-.project {
-	line-height: 330px;
+div#DMS110projectPage li.project {
+	height: 250px;
+	line-height: 250px;
+	padding-bottom: 0;
 }
 .project a {
 	background-color: rgb(180, 180, 180);
