@@ -74,13 +74,14 @@ body {
 .content a:hover {
 	color: rgb(200,0,255);
 }
-
+.Proj {
+	min-height: 500px;
+}
 
 .divide {
 	height: 10px;
 	margin-left: 3%;
 	margin-right: 3%;
-	margin-top: 10%;
 	margin-bottom: 10%;
 	background-color: rgb(180, 180, 180);
 }
