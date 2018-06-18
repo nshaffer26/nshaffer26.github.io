@@ -152,8 +152,11 @@ div#DMS110projectPage img {
 	font-size: 20px;
 }
 
-
+.header .mobileShow {
+	display: none;
+}
 .header .dropdown {
+	display: none;
 	height: 100px;
 	padding-right: 2%;
 	margin-bottom: 30px;
