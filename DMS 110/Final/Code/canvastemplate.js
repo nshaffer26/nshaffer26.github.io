@@ -23,7 +23,6 @@ var height;
 var bWidth;
 var bHeight;
 var path = [];
-var directions = [];
 var mazeSetup = [];
 var maze = [];
 
@@ -186,8 +185,6 @@ function mouseDown() {
 			moved = false;
 			currentC = 0;
 			currentR = 1;
-			path = [];
-			directions = [];
 			mazeSetup = [];
 			maze = [];
 			start();
@@ -396,7 +393,6 @@ function genMaze(w,h) {
 		}
 	}
 	setPath(0,0);
-	createMaze();
 	//Create border around maze:
 	maze.push(new Array(width));
 	for(var i = 0; i < maze[maze.length-1].length; i++) {
@@ -411,8 +407,8 @@ function genMaze(w,h) {
 	maze[1][0] = 255;
 	maze[maze.length-2][maze[0].length-1] = 255;
 
-	bWidth = cv.width/(width);
-	bHeight = cv.width/(width);
+	bWidth = cv.width/width;
+	bHeight = cv.width/width;
 
 	spacers = ((cv.height - (height * bHeight)) / 2);
 }
@@ -434,27 +430,27 @@ function drawMaze() {
 			else {
 				ctx.fillStyle = "rgb(" + maze[j][i] + "," + maze[j][i] + "," + maze[j][i] + ")";
 			}
-			// ctx.strokeStyle = "rgb(255,255,255)";
-			ctx.lineWidth = 0.5;
+			ctx.strokeStyle = "rgb(0,0,0)";
+			ctx.lineWidth = 1;
 			ctx.beginPath();
 			ctx.rect(i*bWidth,spacers+j*bHeight,bWidth,bHeight);
 			ctx.fill();
-			// ctx.stroke();
+			ctx.stroke();
 			ctx.closePath();
 		}
 	}
 }
 function setPath(r,c) {
-	path.push([r,c]);
 	mazeSetup[r][c] = true;
 	var temp = findMoves(r,c);
 	if(temp.length == 0) {
 		if(r != 0 || c != 0) {
-			for(var i = path.length-1; i > 0; i--) {
-				if(findMoves(path[i][0],path[i][1]).length != 0) {
-					directions.push(-1);
-					return setPath(path[i][0],path[i][1]);
+			maze[r*2+1][c*2] = 255;
+			while(path.length > 0) {
+				if(findMoves(path[path.length-1][0],path[path.length-1][1]).length != 0) {
+					return setPath(path[path.length-1][0],path[path.length-1][1]);
 				}
+				path.pop();
 			}
 		}
 		else {
@@ -463,21 +459,26 @@ function setPath(r,c) {
 	}
 	else {
 		var direction = temp[Math.floor(Math.random() * temp.length)];
-		directions.push(direction);
+		path.push([r,c]);
+		maze[r*2+1][c*2] = 255;
 		if(direction == 0) {
 			//Go up
+			maze[r*2+1-1][c*2] = 255;
 			return setPath(r-1,c);
 		}
 		else if(direction == 1) {
 			//Go right
+			maze[r*2+1][c*2+1] = 255;
 			return setPath(r,c+1);
 		}
 		else if(direction == 2) {
 			//Go down
+			maze[r*2+1+1][c*2] = 255;
 			return setPath(r+1,c);
 		}
 		else if(direction == 3) {
 			//Go left
+			maze[r*2+1][c*2-1] = 255;
 			return setPath(r,c-1);
 		}
 	}
@@ -502,31 +503,6 @@ function findMoves(r,c) {
 		moves.push(3);
 	}
 	return moves;
-}
-
-function createMaze() {
-	for(var i = 0; i < path.length; i++) {
-		maze[path[i][0]*2+1][path[i][1]*2] = 255;
-		if(directions[i] == 0) {
-			//Went up
-			maze[path[i][0]*2+1-1][path[i][1]*2] = 255;
-		}
-		else if(directions[i] == 1) {
-			//Went right
-			maze[path[i][0]*2+1][path[i][1]*2+1] = 255;
-		}
-		else if(directions[i] == 2) {
-			//Went down
-			maze[path[i][0]*2+1+1][path[i][1]*2] = 255;
-		}
-		else if(directions[i] == 3) {
-			//Went left
-			maze[path[i][0]*2+1][path[i][1]*2-1] = 255;
-		}
-		else {
-			continue;
-		}
-	}
 }
 
 function setZoom() {
@@ -565,7 +541,8 @@ function zoom() {
 		for(var i = 0; i < 3; i++) {
 			for(var j = 0; j < 3; j++) {
 				ctx.fillStyle = "rgb(" + zColor[i][j] + "," + zColor[i][j] + "," + zColor[i][j] + ")";
-				ctx.lineWidth = 0.5;
+				ctx.strokeStyle = "rgb(0,0,0)";
+				ctx.lineWidth = 1;
 				ctx.beginPath();
 				ctx.rect(zBlocksX[j],zBlocksY[i],cv.width/3,cv.height/3);
 				ctx.fill();
