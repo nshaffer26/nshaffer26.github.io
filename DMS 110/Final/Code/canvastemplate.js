@@ -392,7 +392,7 @@ function genMaze(w,h) {
 			mazeSetup[i][j] = false;
 		}
 	}
-	setPath(0,0);
+	setPath(Math.floor(mazeSetup.length/2),Math.floor(mazeSetup[0].length/2));
 	//Create border around maze:
 	maze.push(new Array(width));
 	for(var i = 0; i < maze[maze.length-1].length; i++) {
@@ -444,7 +444,7 @@ function setPath(r,c) {
 	mazeSetup[r][c] = true;
 	var temp = findMoves(r,c);
 	if(temp.length == 0) {
-		if(r != 0 || c != 0) {
+		if(r != Math.floor(mazeSetup.length/2) || c != Math.floor(mazeSetup[0].length/2)) {
 			maze[r*2+1][c*2] = 255;
 			while(path.length > 0) {
 				if(findMoves(path[path.length-1][0],path[path.length-1][1]).length != 0) {
