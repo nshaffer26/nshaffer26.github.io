@@ -22,7 +22,6 @@ var height;
 
 var bWidth;
 var bHeight;
-var path = [];
 var mazeSetup = [];
 var maze = [];
 
@@ -444,42 +443,39 @@ function setPath(r,c) {
 	mazeSetup[r][c] = true;
 	var temp = findMoves(r,c);
 	if(temp.length == 0) {
-		if(r != Math.floor(mazeSetup.length/2) || c != Math.floor(mazeSetup[0].length/2)) {
-			maze[r*2+1][c*2] = 255;
-			while(path.length > 0) {
-				if(findMoves(path[path.length-1][0],path[path.length-1][1]).length != 0) {
-					return setPath(path[path.length-1][0],path[path.length-1][1]);
-				}
-				path.pop();
-			}
-		}
-		else {
-			return;
-		}
+		maze[r*2+1][c*2] = 255;
+		return;
 	}
 	else {
 		var direction = temp[Math.floor(Math.random() * temp.length)];
-		path.push([r,c]);
 		maze[r*2+1][c*2] = 255;
 		if(direction == 0) {
 			//Go up
 			maze[r*2+1-1][c*2] = 255;
-			return setPath(r-1,c);
+			setPath(r-1,c);
 		}
 		else if(direction == 1) {
 			//Go right
 			maze[r*2+1][c*2+1] = 255;
-			return setPath(r,c+1);
+			setPath(r,c+1);
 		}
 		else if(direction == 2) {
 			//Go down
 			maze[r*2+1+1][c*2] = 255;
-			return setPath(r+1,c);
+			setPath(r+1,c);
 		}
 		else if(direction == 3) {
 			//Go left
 			maze[r*2+1][c*2-1] = 255;
-			return setPath(r,c-1);
+			setPath(r,c-1);
+		}
+
+		temp = findMoves(r,c);
+		if(temp.length == 0) {
+			return;
+		}
+		else {
+			setPath(r,c);
 		}
 	}
 }
