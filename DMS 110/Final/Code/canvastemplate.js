@@ -416,23 +416,7 @@ function drawMaze() {
 	ctx.fillRect(0,0,cv.width,cv.height);
 	ctx.font = "30px Arial";
 	ctx.fillStyle = "rgb(255,255,255)";
-	var difficulty = "";
-	if(level == 1) {
-		difficulty = "Easy";
-	}
-	else if(level == 2) {
-		difficulty = "Medium";
-	}
-	else if(level == 3) {
-		difficulty = "Hard";
-	}
-	else if(level == 4) {
-		difficulty = "Expert";
-	}
-	else {
-		difficulty = "Undefined";
-	}
-	ctx.fillText(difficulty,cv.width-120,spacers/2+15);
+	ctx.fillText(getDifficulty(),cv.width-120,spacers/2+15);
 	if(level != 1) {
 		ctx.fillText("Peeks Left: " + Math.floor(timesZoomed/2),15,spacers/2+15);
 	}
@@ -578,11 +562,29 @@ function zoom() {
 		else {
 			ctx.fillStyle = "rgb(0,0,0)";
 		}
-		ctx.fillText("Level: " + level,cv.width-120,spacers/2+15);
+		ctx.fillText(getDifficulty(),cv.width-120,spacers/2+15);
 		ctx.fillStyle = "rgb(0,0,255)";
 		ctx.fillRect(zBlocksX[1],zBlocksY[1],cv.width/3,cv.height/3);
 	}
 	moved = false;
+}
+
+function getDifficulty() {
+	if(level == 1) {
+		return "Easy";
+	}
+	else if(level == 2) {
+		return "Medium";
+	}
+	else if(level == 3) {
+		return "Hard";
+	}
+	else if(level == 4) {
+		return "Expert";
+	}
+	else {
+		return "Undefined";
+	}
 }
 
 window.addEventListener("resize", setup);
