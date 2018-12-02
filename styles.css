@@ -211,6 +211,9 @@ div#DMS110projectPage img {
 	font-size: 20px;
 	text-decoration: none;
 }
+.header #fourTab li a {
+	width: 21%;
+}
 .header .subpageMenu li a:hover {
 	border-bottom: 2px solid DodgerBlue;
 }
