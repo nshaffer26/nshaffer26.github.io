@@ -217,3 +217,7 @@ div#DMS110projectPage img {
 .header .subpageMenu li a:hover {
 	border-bottom: 2px solid DodgerBlue;
 }
+
+#GameRefTable table,tr,th,td {
+	border: 1px solid black;
+}
