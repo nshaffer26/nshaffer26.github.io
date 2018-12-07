@@ -218,7 +218,7 @@ div#DMS110projectPage img {
 	border-bottom: 2px solid DodgerBlue;
 }
 
-.content .GameRefTable th,td {
+.GameRefTable th, .GameRefTable td {
 	border: 1px solid black;
 	border-collapse: collapse;
 }
