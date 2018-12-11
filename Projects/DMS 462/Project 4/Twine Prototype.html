@@ -11,7 +11,9 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Intragalactic " startnode="7" creator="Twine" creator-version="2.2.1" ifid="E9A00D38-9934-4D8B-B5A1-1253EA93E75E" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Home Planet" tags="" position="913.5,541" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
+<tw-storydata name="Intragalactic " startnode="7" creator="Twine" creator-version="2.2.1" ifid="E9A00D38-9934-4D8B-B5A1-1253EA93E75E" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+</script><tw-passagedata pid="1" name="Home Planet" tags="" position="913,541" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
 (else:)[
 You have $food units of supplies.
 Your fleet is $ships unit(s) strong.
@@ -31,7 +33,7 @@ You have $stardust kilos of stardust.
 
 Ready to take off into space?
 [[Asteroid One]]
-[[Asteroid Three]]]</tw-passagedata><tw-passagedata pid="2" name="Asteroid One" tags="" position="763.5,691" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
+[[Asteroid Three]]]</tw-passagedata><tw-passagedata pid="2" name="Asteroid One" tags="" position="763,691" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
 (else:)[You have $food unit(s) of supplies, $ships ship(s), and $weapons weapon(s).
 
 [[Stay here-&gt;Asteroid One]] 
@@ -40,7 +42,7 @@ Ready to take off into space?
 [[Asteroid Four]]
 
 (set: $dm to $dm + 1) You found some Dark Matter and now have $dm units!
-]</tw-passagedata><tw-passagedata pid="3" name="Asteroid Two" tags="" position="912.5,837" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
+]</tw-passagedata><tw-passagedata pid="3" name="Asteroid Two" tags="" position="912,837" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
 (else:)[You have $food unit(s) of supplies, $ships ship(s), and $weapons weapon(s).
 
 [[Stay here-&gt;Asteroid Two]] 
@@ -50,7 +52,7 @@ Ready to take off into space?
 [[Asteroid Five]]
 
 (set: $titanium to $titanium + 1) You found some titanium and now have $titanium kilos!
-]</tw-passagedata><tw-passagedata pid="4" name="Asteroid Three" tags="" position="1044.5,698" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
+]</tw-passagedata><tw-passagedata pid="4" name="Asteroid Three" tags="" position="1044,698" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
 (else:)[You have $food unit(s) of supplies, $ships ship(s), and $weapons weapon(s).
 
 [[Stay here-&gt;Asteroid Three]] 
@@ -59,7 +61,7 @@ Ready to take off into space?
 [[Asteroid Five]]
 
 (set: $iron to $iron + 1) You found some iron and now have $iron kilos!
-]</tw-passagedata><tw-passagedata pid="5" name="Asteroid Four" tags="" position="740.5,976" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
+]</tw-passagedata><tw-passagedata pid="5" name="Asteroid Four" tags="" position="740,976" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
 (else:)[You have $food unit(s) of supplies, $ships ship(s), and $weapons weapon(s).
 
 [[Stay here-&gt;Asteroid Four]] 
@@ -70,7 +72,7 @@ Ready to take off into space?
 (set: $platinum to $platinum + 1) You found some platinum and now have $platinum kilos!
 
 [[The area ahead looks dangerous, proceed?-&gt;Deep Space]]
-]</tw-passagedata><tw-passagedata pid="6" name="Asteroid Five" tags="" position="1063.5,1007" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
+]</tw-passagedata><tw-passagedata pid="6" name="Asteroid Five" tags="" position="1063,1007" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
 (else:)[You have $food unit(s) of supplies, $ships ship(s), and $weapons weapon(s).
 
 [[Stay here-&gt;Asteroid Five]] 
@@ -81,17 +83,17 @@ Ready to take off into space?
 (set: $crystal to $crystal + 1) You found some crystal and now have $crystal units!
 
 [[The area ahead looks dangerous, proceed?-&gt;Deep Space]]
-]</tw-passagedata><tw-passagedata pid="7" name="Intragalactic Conquest" tags="" position="913.5,379" size="100,100">Your home planet is dying. Fortunately, you have made great progress with lightspeed space exploration and know that a habitable planet is within reach. However, the journey there is not without peril. You may lose ships as a result of harsh space conditions and even encounter unfriendly faces. It may be wise to arm yourself with a large fleet and some weapons. However, your remaining food and water is limited. Good luck.
+]</tw-passagedata><tw-passagedata pid="7" name="Intragalactic Conquest" tags="" position="913,379" size="100,100">Your home planet is dying. Fortunately, you have made great progress with lightspeed space exploration and know that a habitable planet is within reach. However, the journey there is not without peril. You may lose ships as a result of harsh space conditions and even encounter unfriendly faces. It may be wise to arm yourself with a large fleet and some weapons. However, your remaining food and water is limited. Good luck.
 
 [[Start-&gt;Home Planet]]
 (set: $ships to 1)
-(set: $food to 75)
+(set: $food to 200)
 (set: $dm to 0)
 (set: $crystal to 0)
 (set: $iron to 0)
 (set: $titanium to 0)
 (set: $stardust to 0)
-(set: $platinum to 0)</tw-passagedata><tw-passagedata pid="8" name="Deep Space" tags="" position="842.5,1226" size="200,100">{
+(set: $platinum to 0)</tw-passagedata><tw-passagedata pid="8" name="Deep Space" tags="" position="842,1226" size="200,100">{
 	(set: $ships to $ships - Math.min(Math.floor(Math.random() * 10) % 5, $ships))
 }
 
@@ -99,7 +101,7 @@ Ready to take off into space?
 (else:)[Some of your fleet has been lost to the perils of lightspeed space travel. You have $ships ships.&lt;br&gt;
 [[Proceed left?-&gt;Asteroid Six]]&lt;br&gt;
 [[Proceed right?-&gt;Asteroid Seven]]
-]</tw-passagedata><tw-passagedata pid="9" name="Asteroid Six" tags="" position="701.5,1395" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
+]</tw-passagedata><tw-passagedata pid="9" name="Asteroid Six" tags="" position="701,1395" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
 (else:)[You have $food unit(s) of supplies, $ships ship(s), and $weapons weapon(s).
 
 [[Head back home-&gt;Asteroid Four]] 
@@ -107,7 +109,10 @@ Ready to take off into space?
 [[Asteroid Seven]] 
 [[Asteroid Eight]]
 [[Asteroid Nine]]
-]</tw-passagedata><tw-passagedata pid="10" name="Asteroid Seven" tags="" position="1045.5,1397" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
+
+(set: $iron to it + 2) You found a lot of iron and now have $iron kilos!
+(if: Math.random() &gt; . 75)[(set: $stardust to it + 1)You also found some stardust and now have $stardust units!]
+]</tw-passagedata><tw-passagedata pid="10" name="Asteroid Seven" tags="" position="1045,1397" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
 (else:)[You have $food unit(s) of supplies, $ships ship(s), and $weapons weapon(s).
 
 [[Head back home-&gt;Asteroid Five]] 
@@ -115,7 +120,10 @@ Ready to take off into space?
 [[Asteroid Six]] 
 [[Asteroid Eight]] 
 [[Asteroid Ten]] 
-]</tw-passagedata><tw-passagedata pid="11" name="Asteroid Eight" tags="" position="872.5,1520" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
+
+(set: $crystal to it + 2) You found a lot of space crystal and now have $crystal units!
+(if: Math.random() &gt; . 75)[(set: $stardust to it + 1)You also found some stardust and now have $stardust units!]
+]</tw-passagedata><tw-passagedata pid="11" name="Asteroid Eight" tags="" position="872,1520" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
 (else:)[You have $food unit(s) of supplies, $ships ship(s), and $weapons weapon(s).
 
 [[Stay here-&gt;Asteroid Eight]] 
@@ -123,14 +131,18 @@ Ready to take off into space?
 [[Asteroid Seven]] 
 [[Asteroid Nine]] 
 [[Asteroid Ten]] 
-]</tw-passagedata><tw-passagedata pid="12" name="Asteroid Nine" tags="" position="699.5,1627" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
+(set: $dm to it + 2) You found a lot of dark matter and now have $dm units! (if: Math.random() &gt; . 75)[(set: $stardust to it + 1)You also found some stardust and now have $stardust units!]
+]</tw-passagedata><tw-passagedata pid="12" name="Asteroid Nine" tags="" position="699,1627" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
 (else:)[You have $food unit(s) of supplies, $ships ship(s), and $weapons weapon(s).
 
 [[Stay here-&gt;Asteroid Nine]] 
 [[Asteroid Six]] 
 [[Asteroid Eight]] 
 [[Head toward the new planet-&gt;Contested Area]]
-]</tw-passagedata><tw-passagedata pid="13" name="Asteroid Ten" tags="" position="1049.5,1640" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
+
+(set: $platinum to it + 2) You found a lot of platinum and now have $platinum kilos!
+(if: Math.random() &gt; . 75)[(set: $stardust to it + 1)You also found some stardust and now have $stardust units!]
+]</tw-passagedata><tw-passagedata pid="13" name="Asteroid Ten" tags="" position="1049,1640" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
 (else:)[You have $food unit(s) of supplies, $ships ship(s), and $weapons weapon(s).
 
 [[Stay here-&gt;Asteroid Ten]] 
@@ -138,7 +150,10 @@ Ready to take off into space?
 [[Asteroid Eight]] 
 [[Asteroid Nine]] 
 [[Head toward the new planet-&gt;Contested Area]]
-]</tw-passagedata><tw-passagedata pid="14" name="Contested Area" tags="" position="864.5,1807" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
+
+(set: $stardust to it + 1) You found some stardust and now have $stardust kilos!
+(if: Math.random() &gt; . 75)[(set: $dm to it + 1)You also found some Dark Matter and now have $dm units!]
+]</tw-passagedata><tw-passagedata pid="14" name="Contested Area" tags="" position="864,1807" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
 (else:)[You have $food unit(s) of supplies, $ships ship(s), and $weapons weapon(s).
 
 It looks like there are other ships in the area. They may be hostile!
@@ -149,7 +164,7 @@ Will you proceed?
 [[No, I&#39;m scared-&gt;Asteroid Eight]]
 
 (set: $enemies to 5)
-]</tw-passagedata><tw-passagedata pid="15" name="Combat Area" tags="" position="864.5,1957" size="100,100">(set: _enemyRoll to Math.random()) (set: _playerRoll to Math.random()) 
+]</tw-passagedata><tw-passagedata pid="15" name="Combat Area" tags="" position="864,1957" size="100,100">(set: _enemyRoll to Math.random()) (set: _playerRoll to Math.random()) 
 (if: $enemies &gt; 0)[You&#39;re under fire!(if: _enemyRoll &gt;= .25)[(set: $ships to $ships - 1) One of your ships was destroyed!](if: _enemyRoll &lt; .25)[ They missed!]
 	(if: $weapons &lt; 0)[You have no weapons to attack the enemy!]
 	(else:)[You fired at the enemy! (set: $weapons to $weapons -1)(if: _playerRoll &gt;= .25)[(set: $enemies to $enemies - 1)Your blast destroyed a ship!](if: _playerRoll &lt; .25)[You missed the attack!]
@@ -159,7 +174,7 @@ Will you proceed?
 	The enemy force has been overcome. [[Proceed?-&gt;New Planet]]
 ](else:)[[[Stick around for more?-&gt;Combat Area]]
 [[Retreat!-&gt;Contested Area]]
-]]</tw-passagedata><tw-passagedata pid="16" name="New Planet" tags="" position="864.5,2107" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
+]]</tw-passagedata><tw-passagedata pid="16" name="New Planet" tags="" position="864,2107" size="100,100">(set: $food to $food - $ships)(if: $food &lt;= 0)[You ran out of supplies! [[Restart?-&gt;Intragalactic Conquest]]]
 (if: $food &gt; 0)[You made it to the new planet, congratulations! What could possibly happen now? Who knows!]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
