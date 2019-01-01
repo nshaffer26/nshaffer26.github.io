@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch4jConfig>
-  <dontWrapJar>false</dontWrapJar>
+  <dontWrapJar>true</dontWrapJar>
   <headerType>gui</headerType>
-  <jar>C:\Users\nshaf\OneDrive\Documents\Website\nshaffer26.github.io\Projects\Programs\Fractals.jar</jar>
+  <jar>Fractals.jar</jar>
   <outfile>C:\Users\nshaf\OneDrive\Documents\Website\nshaffer26.github.io\Projects\Programs\Fractals.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
