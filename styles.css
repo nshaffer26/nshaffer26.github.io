@@ -223,3 +223,25 @@ div#DMS110projectPage img {
 	border: 1px solid black;
 	border-collapse: collapse;
 }
+
+/* Resume */
+#resume .resumeTitle {
+	color: dodgerblue;
+	border-left: 5px solid DodgerBlue;
+	padding-left: 5px;
+	margin: 20px 0 5px 0;
+}
+#resume .resumeSection {
+	border: 3px dashed rgb(180, 180, 180);
+	padding: 20px;
+}
+#resume .resumeSubtitle {
+	margin: 0;
+}
+#resume h4 {
+	color: rgb(180, 180, 180);
+	margin: 0;
+}
+#resume ul {
+	margin: 0;
+}
