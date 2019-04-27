@@ -1,0 +1,114 @@
+/*
+Author: Nicholas Shaffer
+Date: 4/23/19
+
+APIs:
+    https://pokeapi.co/
+Links:
+    Colors: https://www.schemecolor.com/pokemon-colors.php
+    Font: https://fonts.googleapis.com/css?family=Press+Start+2P
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background: red;
+}
+#get-pokemon {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    padding: 3%;
+    background-color: #3B4CCA;
+    color: #FFDE00;
+}
+#get-pokemon:hover {
+    cursor: pointer;
+    background-color: #FFDE00;
+    color: #3B4CCA;
+}
+#image-container {
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#image-container img {
+    width: 10%;
+}
+#image {
+    width: 20%;
+    border: 10px solid black;
+    border-radius: 50%;
+    background-color: white;
+}
+#image #pokemon {
+    -webkit-filter: contrast(0%);
+    filter: contrast(0%);
+    width: 100%;
+}
+#description {
+    width: 60%;
+    line-height: 1.5em;
+    font-size: 1.5em;
+    color: white;
+}
+#choices {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#choices div {
+    width: 47%;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 20px;
+    padding: 1%;
+    background-color: #3B4CCA;
+    color: #FFDE00;
+}
+#choices div:hover {
+    cursor: pointer;
+    background-color: #FFDE00;
+    color: #3B4CCA;
+}
+#feedback {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 3%;
+}
+@media only screen and (max-width: 600px) {
+    #get-pokemon {
+        font-size: 1.5em;
+    }
+    #choices div {
+        width: 100%;
+        font-size: 1em;
+        text-align: center;
+    }
+    #description {
+        width: 100%;
+        line-height: 1.2em;
+        font-size: 1em;
+    }
+    #image-container {
+        flex-direction: column;
+    }
+    #image {
+        width: 70%;
+    }
+    #description {
+        padding-top: 20px;
+        text-align: center;
+    }
+    #feedback {
+        font-size: 1em;
+    }
+}

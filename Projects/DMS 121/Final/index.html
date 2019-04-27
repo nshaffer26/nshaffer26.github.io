@@ -1,0 +1,39 @@
+<!--
+Author: Nicholas Shaffer
+Date: 4/23/19
+
+APIs:
+    https://pokeapi.co/
+Links:
+    Colors: https://www.schemecolor.com/pokemon-colors.php
+    Font: https://fonts.googleapis.com/css?family=Press+Start+2P
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Who's That Pokémon?</title>
+        <meta name="author" content="Nicholas Shaffer">
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <div class="content">
+            <div id="get-pokemon" onclick="getRandomIds()">Who's That Pokémon?</div>
+            <div id="image-container">
+                <img src="Images/pokeball.png">
+                <div id="image"></div>
+                <img src="Images/pokeball.png">
+            </div>
+            <div id="choices">
+                <div id="choice0" onclick="selectChoice(0)"></div>
+                <div id="choice1" onclick="selectChoice(1)"></div>
+                <div id="choice2" onclick="selectChoice(2)"></div>
+                <div id="choice3" onclick="selectChoice(3)"></div>
+            </div>
+            <div id="error"></div>
+            <div id="feedback"></div>
+        </div>
+    </body>
+</html>
