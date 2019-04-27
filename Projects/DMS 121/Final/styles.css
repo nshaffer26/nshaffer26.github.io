@@ -84,7 +84,7 @@ body {
     margin-top: 20px;
     padding: 3%;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
     #get-pokemon {
         font-size: 1.5em;
     }
