@@ -14,16 +14,12 @@ const genII = 100;
 const genIII = 135;
 const genIV = 107;
 const numPokemon = genI + genII + genIII + genIV;
-//TODO: Add tool to choose generations?
 
 let ans;
-let description;
 let image;
+let description;
 
 function getRandomIds() {
-    $('#choices').css({
-        "display": "flex"
-    });
     $('#feedback').css({
         "display": "none"
     });
@@ -50,48 +46,45 @@ function getPokemon(ids) {
     $('#image-container').css({
         "display": "flex"
     });
+    $('#choices').css({
+        "display": "flex"
+    });
+    ans = Math.floor(Math.random() * ids.length);
     for(let i = 0; i < ids.length; i++) {
-        let j = Math.floor(Math.random() * ids.length);
-        while(ids[j] == -1) {
-            j = Math.floor(Math.random() * ids.length);
-        }
-        let id = ids[j];
         $.ajax({
-            url: `https://pokeapi.co/api/v2/pokemon/${id}`,
+            url: `https://pokeapi.co/api/v2/pokemon-species/${ids[i]}`,
             type: 'GET',
             data: {
                 format: 'json',
             },
             success: function(response) {
-                if(i == 0) {
-                    image = response.sprites.front_default;
-                    $('#image').html(`<img id="pokemon" src=${image}>`);
-                    getDescription(id);
-                    ans = j;
-                }
-                let name = response.name;
+                let name = response.names[2].name;
                 name = name.toUpperCase();
-                $('#choice' + j).text(name);
+                if(i == ans) {
+                    let entries = response.flavor_text_entries;
+                    description = entries[entries.length-1].flavor_text;
+                    description = description.replace(/[\u0000-\u001f]/g," ");
+                    getPicture(ids[i]);
+                }
+                $('#choice' + i).text(name);
             },
             error: function() {
                 $('#error').text("There was an error processing your request. Please try again.");
             }
         });
-        ids.splice(j,1,-1);
     }
 }
 
-function getDescription(id) {
+function getPicture(id) {
     $.ajax({
-        url: `https://pokeapi.co/api/v2/pokemon-species/${id}`,
+        url: `https://pokeapi.co/api/v2/pokemon/${id}`,
         type: 'GET',
         data: {
             format: 'json',
         },
         success: function(response) {
-            let entries = response.flavor_text_entries
-            description = entries[entries.length-1].flavor_text;
-            description = description.replace(/[\u0000-\u001f]/g," ");
+            image = response.sprites.front_default;
+            $('#image').html(`<img id="pokemon" src=${image}>`);
         },
         error: function() {
             $('#error').text("There was an error processing your request. Please try again.");
