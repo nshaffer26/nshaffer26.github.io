@@ -23,7 +23,7 @@ function getRandomIds() {
     $('#feedback').css({
         "display": "none"
     });
-    if($(window).width() <= 600) {
+    if($(window).width() <= 750) {
         $('#image-container').html("<div id=\"image\"></div>");
     }
     else {
