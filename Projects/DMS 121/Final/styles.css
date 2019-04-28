@@ -84,31 +84,3 @@ body {
     margin-top: 20px;
     padding: 3%;
 }
-@media only screen and (max-width: 750px) {
-    #get-pokemon {
-        font-size: 1.5em;
-    }
-    #choices div {
-        width: 100%;
-        font-size: 1em;
-        text-align: center;
-    }
-    #description {
-        width: 100%;
-        line-height: 1.2em;
-        font-size: 1em;
-    }
-    #image-container {
-        flex-direction: column;
-    }
-    #image {
-        width: 70%;
-    }
-    #description {
-        padding-top: 20px;
-        text-align: center;
-    }
-    #feedback {
-        font-size: 1em;
-    }
-}
