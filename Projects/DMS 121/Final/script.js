@@ -23,6 +23,7 @@ function getRandomIds() {
         $('#gen1').addClass('gen-selected');
         gens.gen1.selected = true;
     }
+    $('#choices div').removeClass('gen-selected');
     $('#feedback').css({
         "display": "none"
     });
