@@ -138,6 +138,8 @@ function selectGen(gen) {
 }
 
 function selectChoice(i) {
+    $('#choices div').removeClass('gen-selected');
+    $('#choice' + i).addClass('gen-selected');
     if(i == ans) {
         $('#image-container').html(`<div id=\"image\"></div><div id=\"description\"></div>`);
         $('#image').html(`<img id="pokemon" src=${image}>`);
