@@ -18,6 +18,10 @@ let ans;
 let image;
 let description;
 
+// API Details
+const pokemonNameIndex = 8  // English version of name, may change in future
+const pokedexDescriptionIndex = 0 // Pokedex entry from first appearance, may change in future
+
 function getRandomIds() {
     if(!(gens.gen1.selected || gens.gen2.selected || gens.gen3.selected || gens.gen4.selected)) {
         $('#gen1').addClass('gen-selected');
@@ -83,11 +87,11 @@ function getPokemon(ids) {
                 format: 'json',
             },
             success: function(response) {
-                let name = response.names[2].name;
+                let name = response.names[pokemonNameIndex].name;
                 name = name.toUpperCase();
                 if(i == ans) {
                     let entries = response.flavor_text_entries;
-                    description = entries[entries.length-1].flavor_text;
+                    description = entries[pokedexDescriptionIndex].flavor_text;
                     description = description.replace(/[\u0000-\u001f]/g," ");
                     getPicture(ids[i]);
                 }
