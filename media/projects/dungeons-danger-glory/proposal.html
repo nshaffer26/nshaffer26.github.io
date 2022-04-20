@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3 Proposal</title>
+
+    <link rel="stylesheet" href="./css/proposal.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../images/favicon/site.webmanifest">
+</head>
+
+<body>
+    <header>
+        <h1>Dungeons, Danger, Glory</h1>
+        <h2>Description:</h2>
+        <div id="about">
+            <div id="info">
+                <p>
+                    While avoiding monsters, the player must make their way through a maze-like dungeon to find gems and
+                    other riches! Find bombs along the way to defend yourself and last as long as possible!
+                </p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="proposal">
+            <h2>Details:</h2>
+            <h3>Genre</h3>
+            <p>Rouge-Like Dungeon Crawler, Action, Adventure</p>
+
+            <h3>Platform</h3>
+            <p>Desktop</p>
+
+            <h3>Story</h3>
+            <p>The player must make their way through a procedurally generated, maze-like dungeon while avoiding
+                monsters.
+                Survive for as long as possible and collect as many gems as you can!</p>
+
+            <h3>Aesthetics</h3>
+            <p>I'm aiming for a more retro look. Dungeons will be a semi-randomly laid out grid, and the player
+                character,
+                monsters, and enemies will hopefully be pixel-art style sprites. Sounds will be 8-bit with ambient
+                background music. The background music might change depending on the which level the player is in.</p>
+
+            <h3>Gameplay</h3>
+            <p>The gameplay will be mostly self-explanatory. The player will be told basic controls, such as moving and
+                attacking. I plan on having crates scattered around that could contain either bombs or gems. The player
+                can
+                choose to attack with a melee attack or throw a bomb. Bombs will be more effective in attacking
+                monsters.
+                The player will be told how to move, attack, and how to switch attack modes (between melee and bombs).
+            </p>
+
+            <h3>Mockups</h3>
+            <div id="mockup_images">
+                <img src="./media/images/proposal-sketch-1.png" alt="A mockup of my title screen">
+                <img src="./media/images/proposal-sketch-2.png" alt="A mockup of what my gameplay will look like">
+            </div>
+
+            <h3>Other</h3>
+            <p>
+                Currently, the only external library I plan to use is PixiJS. Assets will most likely be sourced from
+                online, open-source resources.
+            </p>
+
+            <h3>About Me</h3>
+            <p>
+                My name is Nicholas Shaffer, and I am currently in my first year of studying Game Design and Development
+                at
+                RIT. Prior to RIT, I earned a BA in Computer Science from the University at Buffalo in 2020. I enjoy the
+                more technical aspects of game design and have thus far found myself more drawn to the "Development"
+                side of
+                Game Design and Development. I have experience with C#, C++, JavaScript, and Java, as well as both Unity
+                and
+                Blender.
+            </p>
+        </section>
+
+        <section id="documentation">
+            <h2>Documentation</h2>
+            <h3>Goal</h3>
+            <p>The goal of this project was to create a game from scratch using PixiJS. The game I created for this
+                project
+                is a dungeon crawler in which you must collect gems and avoid enemies while making your way through a
+                maze-like dungeon. As you progress from level to level, more enemies will spawn, and the maze will
+                become
+                bigger.</p>
+
+            <h3>Design Process</h3>
+            <p>My design process was to focus on the functionality first and aesthetics second. I first turned my
+                attention
+                towards generating rooms that would connect in a maze-like pattern. After I figured that out, I focused
+                on
+                getting the different elements spawned into each room of the dungeon. These elements include crates,
+                exits,
+                and enemies. Next, I focused on creating rooms that were more varied, and then on enemies that could
+                move
+                throughout these rooms. Once I finished this, I focused my attention on the GUI and the collisions that
+                would affect the values displayed, such as health, number of gems, and level. One of the last things I
+                did
+                before turning my attention towards implementing sprites for my objects was giving the player the
+                ability to
+                attack crates and enemies. Once I figured this out, I spent some time creating a couple of my own
+                sprites,
+                as well as finding others that I was unable to create myself. My final task was to add music and sound
+                effects to my game.</p>
+
+            <h3>Sources</h3>
+            <ul>
+                <li>Sprite Creation: <a href="https://www.pixilart.com/">https://www.pixilart.com/</a></li>
+                <li>Other sprites not created by me: <a
+                        href="https://0x72.itch.io/dungeontileset-ii">https://0x72.itch.io/dungeontileset-ii</a></li>
+                <li>Sounds: <a href="https://freesound.org/">https://freesound.org/</a></li>
+                <li>Fonts: <a href="https://fonts.google.com/">https://fonts.google.com/</a></li>
+            </ul>
+            <p>NOTE: All assets not created by me are available under the Creative Commons 0 License and are completely
+                free
+                to use and share.</p>
+
+            <h3>TODO</h3>
+            <ul>
+                <li>I wasn't quite able to get my textures mapped properly to the dungeon, I would like to fix this in
+                    the
+                    future.</li>
+                <li>I would also like to implement some functionality to have the player be able to through some sort of
+                    projectile. My initial plan was to give the player bombs, but I was also unable to implement this
+                    feature.</li>
+                <li>I would like to implement a feature where enemies begin to track the player and chase them if they
+                    get
+                    too close.</li>
+                <li>I would also like to add some variation to the levels. One of my original plans for this project was
+                    to
+                    have some levels that were in the dark, giving the player a smaller field of view with which to
+                    navigate
+                    and see enemies.</li>
+            </ul>
+
+            <h3>Notes</h3>
+            <ul>
+                <li>I'm not too proud of where this current version of my project is aesthetically, but the
+                    functionality is
+                    all there. I definitely plan to improve upon it once my submission has been graded.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2021 Nicholas Shaffer</p>
+    </footer>
+</body>
+
+</html>

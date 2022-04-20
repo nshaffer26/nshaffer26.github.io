@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Recipe!</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="./media/fonts/Roboto_Slab/stylesheet.css" type="text/css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="../../images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="../../images/favicon/site.webmanifest">
+
+    <!-- Scripts -->
+    <script src="./js/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Find a Recipe!</h1>
+    </header>
+    <main>
+        <section id="search_tools_wrapper">
+            <h2>Search</h2>
+            <div id="search_tools">
+                <span id="error"></span>
+                <div id="search_ingredients_wrapper">
+                    <label for="search_ingredients">Ingredients <span class="required">*</span></label><br>
+                    <input placeholder="Chicken, Tomato, ..." id="search_ingredients" name="search_ingredients"
+                        type="search" autofocus />
+                </div>
+                <div id="search_calories_wrapper">
+                    <label for="search_calories">Max Calories Per Serving</label><br>
+                    <input type="number" id="search_calories" name="search_calories" min="0">
+                </div>
+                <span id="toggle_search_tools_advanced">Advanced Search <i class="fas fa-ellipsis-h"></i></span>
+                <div class="search_tools_advanced hidden">
+                    <fieldset id="search_meal_wrapper">
+                        <legend>Meal</legend>
+                        <div id="search_meal" class="advanced_search_option">
+                            <div>
+                                <input type="radio" name="meal" id="meal-All" value="All" />
+                                <label for="meal-All">All</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="meal" id="meal-Breakfast" value="Breakfast" />
+                                <label for="meal-Breakfast">Breakfast</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="meal" id="meal-Lunch" value="Lunch" />
+                                <label for="meal-Lunch">Lunch</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="meal" id="meal-Dinner" value="Dinner" />
+                                <label for="meal-Dinner">Dinner</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="meal" id="meal-Snack" value="Snack" />
+                                <label for="meal-Snack">Snack</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="meal" id="meal-Teatime" value="Teatime" />
+                                <label for="meal-Teatime">Teatime</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset id="search_cuisine_wrapper">
+                        <legend>Cuisine</legend>
+                        <div id="search_cuisine" class="advanced_search_option">
+                            <div>
+                                <input type="checkbox" name="cuisine" id="cuisine-All" value="All" />
+                                <label for="cuisine-All">All</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="cuisine" id="cuisine-American" value="American" />
+                                <label for="cuisine-American">American</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="cuisine" id="cuisine-Asian" value="Asian" />
+                                <label for="cuisine-Asian">Asian</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="cuisine" id="cuisine-British" value="British" />
+                                <label for="cuisine-British">British</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="cuisine" id="cuisine-Caribbean" value="Caribbean" />
+                                <label for="cuisine-Caribbean">Caribbean</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="cuisine" id="cuisine-CentralEurope"
+                                    value="Central Europe" />
+                                <label for="cuisine-CentralEurope">Central Europe</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="cuisine" id="cuisine-Chinese" value="Chinese" />
+                                <label for="cuisine-Chinese">Chinese</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="cuisine" id="cuisine-EasternEurope"
+                                    value="Eastern Europe" />
+                                <label for="cuisine-EasternEurope">Eastern Europe</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="cuisine" id="cuisine-French" value="French" />
+                                <label for="cuisine-French">French</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="cuisine" id="cuisine-Indian" value="Indian" />
+                                <label for="cuisine-Indian">Indian</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="cuisine" id="cuisine-Italian" value="Italian" />
+                                <label for="cuisine-Italian">Italian</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="cuisine" id="cuisine-Japanese" value="Japanese" />
+                                <label for="cuisine-Japanese">Japanese</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="cuisine" id="cuisine-Kosher" value="Kosher" />
+                                <label for="cuisine-Kosher">Kosher</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="cuisine" id="cuisine-Mediterranean"
+                                    value="Mediterranean" />
+                                <label for="cuisine-Mediterranean">Mediterranean</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="cuisine" id="cuisine-Mexican" value="Mexican" />
+                                <label for="cuisine-Mexican">Mexican</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="cuisine" id="cuisine-MiddleEastern"
+                                    value="Middle Eastern" />
+                                <label for="cuisine-MiddleEastern">Middle Eastern</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="cuisine" id="cuisine-Nordic" value="Nordic" />
+                                <label for="cuisine-Nordic">Nordic</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="cuisine" id="cuisine-SouthAmerican"
+                                    value="South American" />
+                                <label for="cuisine-SouthAmerican">South American</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="cuisine" id="cuisine-SouthEastAsian"
+                                    value="South East Asian" />
+                                <label for="cuisine-SouthEastAsian">South East Asian</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset id="search_health_wrapper">
+                        <legend>Health Labels</legend>
+                        <div id="search_health" class="advanced_search_option">
+                            <div>
+                                <input type="checkbox" name="health" id="health-All" value="All" />
+                                <label for="health-All">All</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="health" id="health-Vegetarian" value="vegetarian" />
+                                <label for="health-Vegetarian">Vegetarian</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="health" id="health-Vegan" value="vegan" />
+                                <label for="health-Vegan">Vegan</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="health" id="health-Pescatarian" value="pescatarian" />
+                                <label for="health-Pescatarian">Pescatarian</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="health" id="health-Kosher" value="kosher" />
+                                <label for="health-Kosher">Kosher</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="health" id="health-Gluten" value="gluten-free" />
+                                <label for="health-Gluten">Gluten Free</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="health" id="health-Keto" value="keto-friendly" />
+                                <label for="health-Keto">Keto</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="health" id="health-Paleo" value="paleo" />
+                                <label for="health-Paleo">Paleo</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="health" id="health-Dairy" value="dairy-free" />
+                                <label for="health-Dairy">Dairy Free</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="health" id="health-NoSugar" value="low-sugar" />
+                                <label for="health-NoSugar">No Sugar</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="health" id="health-Soy" value="soy-free" />
+                                <label for="health-Soy">Soy Free</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="health" id="health-TreeNuts" value="tree-nut-free" />
+                                <label for="health-TreeNuts">Tree Nut Free</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <button type="button" id="search_button">Search</button>
+            </div>
+        </section>
+        <section id="search_results_wrapper">
+            <h2>Results</h2>
+            <div id="search_results">
+                <p>Enter some ingredients and hit "Seach" to find some recipes</p>
+            </div>
+        </section>
+        <a id="to_top" href="#"><i class="fas fa-chevron-up"></i></a>
+    </main>
+    <footer>
+        <p>&copy; 2021 Nicholas Shaffer</p>
+        <a href="./media/documents/Documentation.pdf">Documentation</a>
+    </footer>
+</body>
+
+</html>

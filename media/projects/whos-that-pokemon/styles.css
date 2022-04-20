@@ -1,0 +1,96 @@
+/*
+Author: Nicholas Shaffer
+Date: 4/23/19
+
+APIs:
+    https://pokeapi.co/
+Links:
+    Colors: https://www.schemecolor.com/pokemon-colors.php
+    Font: https://fonts.googleapis.com/css?family=Press+Start+2P
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+.button {
+    background-color: #3B4CCA;
+    color: #FFDE00;
+}
+.button:hover {
+    cursor: pointer;
+    background-color: #FFDE00;
+    color: #3B4CCA;
+}
+body {
+    font-family: 'Press Start 2P', cursive;
+    background: red;
+}
+#gen-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+#gen-container div {
+    width: 20%;
+    padding: 2%;
+    text-align: center;
+}
+.gen-selected {
+    background-color: #FFDE00;
+    color: #3B4CCA;
+}
+#get-pokemon {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    padding: 2%;
+}
+#image-container {
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#image-container img {
+    width: 10%;
+}
+#image {
+    width: 20%;
+    border: 10px solid black;
+    border-radius: 50%;
+    background-color: white;
+}
+#image #pokemon {
+    -webkit-filter: contrast(0%);
+    filter: contrast(0%);
+    width: 100%;
+}
+#description {
+    width: 60%;
+    line-height: 1.5em;
+    font-size: 1.5em;
+    color: white;
+}
+#choices {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#choices div {
+    width: 47%;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 20px;
+    padding: 1%;
+}
+#feedback {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 3%;
+}

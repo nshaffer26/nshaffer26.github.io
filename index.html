@@ -1,54 +1,205 @@
-<!doctype html>
-<html>
-	<head>
-		<title>Home</title>
-		<link rel="icon" href="Images/icon.png" type="image/png">
-		<link rel="apple-touch-icon" href="Images/icon.png">
-		<meta charset="UTF-8">
-		<meta name="description" content="The personal website of Nicholas Shaffer">
-		<meta name="keywords" content="personal, website, Nicholas, Shaffer, programming">
-		<meta name="author" content="Nicholas Shaffer">
-		<meta name=viewport content="width=device-width, initial-scale=1">
-		<meta name="msvalidate.01" content="8A4D7F19CBA0C7C286A8D9C8C496FB08" />
-		<link rel="stylesheet" type="text/css" href="styles.css"/>
-		<link rel="stylesheet" media="screen and (max-width:750px)" href="mobile.css">
-		<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
-		<script src="script.js"></script>
-	</head>
-	<body>
-		<div class="page">
-			<div class="header">
-				<div class="menu">
-					<ul class="mobileHide">
-						<li> <div>Nicholas Shaffer</div> </li>
-						<li> <a href="projects.html">Projects</a> </li>
-						<li> <a href="contact.html">Contact</a> </li>
-						<li> <a href="resume.html">Résumé</a> </li>
-						<li> <a href="index.html" id="active">Home</a> </li>
-					</ul>
-					<ul class="mobileShow">
-						<li> <div>Nicholas Shaffer</div> </li>
-						<li> <div id="dropButton">Menu</div> </li>
-					</ul>
-				</div>
-				<div class="dropdown">
-					<ul>
-						<li> <a href="index.html">Home</a> </li>
-						<li> <a href="resume.html">Résumé</a> </li>
-						<li> <a href="contact.html">Contact</a> </li>
-						<li> <a href="projects.html">Projects</a> </li>
-					</ul>
-				</div>
-			</div>
-			<div class="content">
-				<div><img id="imgMe" src="Images\Me.jpg" alt="Nicholas Shaffer"></div>
-				<h2>About Me:</h2>
-				<p>
-					My name is Nicholas Shaffer and I am from Clarence Center, New York. I graduated
-					from Clarence Senior High School in 2016 and am now attending the University at
-					Buffalo, where I hope to further my education in computer science.
-				</p>
-			</div>
-		</div>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicholas Shaffer's Portfolio</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./media/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./media/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./media/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./media/images/favicon/site.webmanifest">
+
+    <!-- Scripts -->
+    <script src="js/main.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="hamburger" class="hidden">
+                <a href="./"><img src="./media/images/favicon/favicon.png" alt=""></a>
+                <i id="hamburger_button" class="fas fa-bars"></i>
+            </div>
+            <div id="menu">
+                <a href="./"><img src="./media/images/favicon/favicon.png" alt=""></a>
+                <a href="./">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Nicholas Shaffer's<br>Portfolio</h1>
+            <div id="links">
+                <a href="https://www.linkedin.com/in/nshaffer26/">LinkedIn <i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/nshaffer26">GitHub <i class="fab fa-github"></i></a>
+                <a href="media/documents/nicholas_shaffer_resume.pdf">Resume <i class="far fa-file"></i></a>
+            </div>
+        </section>
+        <section id="about">
+            <h2>About</h2>
+            <div id="about_details">
+                <img src="./media/images/nicholas-shaffer.jpg" alt="">
+                <p>
+                    My name is Nicholas Shaffer, and I am currently studying Game Design and Development at RIT. Prior
+                    to RIT, I earned a BA in Computer Science from the University at Buffalo in 2020. I enjoy the more
+                    technical aspects of game design and have thus far found myself more drawn to the "Development" side
+                    of Game Design and Development. I have experience with C#, C++, JavaScript, Java, Unity, and
+                    Blender.
+                </p>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div id="gallery">
+                <div id="project_1" class="project">
+                    <!-- <img src="https://via.placeholder.com/500x400" alt=""> -->
+                    <div class="project_image"></div>
+                    <div class="project_title toggle_info">
+                        <h4>Dungeons, Danger, Glory</h4>
+                        <div>More<i class="fas fa-ellipsis-h"></i></div>
+                    </div>
+                </div>
+                <div id="project_1_info" class="project_info hidden">
+                    <h3>Dungeons, Danger, Glory</h3>
+                    <p>
+                        In this project, I use PixiJS to create a dungeon crawler within JavaScript. I also utilized
+                        Howler.js for audio. The goal of the game is to navigate a maze-like dungeon, collecting gems
+                        and avoiding monsters along the way, all while trying to get as far as possible. This is a
+                        project I completed by myself, and so my role was one of both design and development. One of my
+                        biggest challenges with this project was in building the dungeon's maze-like pattern in a way
+                        such that all rooms connected. Another challenge would definitely be getting the textures to
+                        line up in a logical way. There's still some work that needs to be done with the textures, and
+                        so this project is a work in progress.
+                    </p>
+                    <a href="./media/projects/dungeons-danger-glory/">See it here</a>
+                </div>
+                <div id="project_2" class="project">
+                    <!-- <img src="https://via.placeholder.com/500x400" alt=""> -->
+                    <div class="project_image"></div>
+                    <div class="project_title toggle_info">
+                        <h4>Find a Recipe!</h4>
+                        <div>More<i class="fas fa-ellipsis-h"></i></div>
+                    </div>
+                </div>
+                <div id="project_2_info" class="project_info hidden">
+                    <h3>Find a Recipe!</h3>
+                    <p>
+                        In this project, I made use of an API called Edamam Recipe Search, which can be found <a
+                            href="https://developer.edamam.com/edamam-docs-recipe-api">here</a>. The goal of this
+                        project was to make use of an online API to display recipes based on ingredients and other
+                        filters entered by the user. These filters include maximum calories per serving, meal type,
+                        cuisine type, and any health labels the user wishes to include. This is a project I completed by
+                        myself, and so my role was one of both design and development. A major challenge in completing
+                        this project was in getting all of the filters to work and return the expected results. I also
+                        faced some issues with the way the API handles images; some of the results returned after an API
+                        call do not include proper image links, and so I needed to find a way to sort these out and
+                        insert a placeholder image in place of the invalid image.
+                    </p>
+                    <a href="./media/projects/find-a-recipe/">See it here</a>
+                </div>
+                <div id="project_3" class="project">
+                    <!-- <img src="./media/images/whos-that-pokemon.png" alt=""> -->
+                    <div class="project_image"></div>
+                    <div class="project_title toggle_info">
+                        <h4>Who's That Pokémon?</h4>
+                        <div>More<i class="fas fa-ellipsis-h"></i></div>
+                    </div>
+                </div>
+                <div id="project_3_info" class="project_info hidden">
+                    <h3>Who's That Pokémon?</h3>
+                    <p>
+                        In this project, I made use of an API called PokéAPI, which can be found <a
+                            href="https://pokeapi.co/">here</a>. I also used jQuery in this project to simplify some of
+                        JavaScript's syntax. My goal was to recreate a game that would take place during commercial
+                        breaks of the animated Pokémon show. In this game, viewers were asked to guess the name of a
+                        Pokémon after being given only its silhouette. This is a project I completed by myself, and so
+                        my role was one of both design and development. This project was my first experience with using
+                        an API, and so my biggest challenges came from this lack of experience. Once I was able to get
+                        all of the information I needed from the API, I only needed to focus on the layout and
+                        functionality of the game to make sure everything was displayed in a logical and
+                        easy-to-understand way.
+                    </p>
+                    <a href="./media/projects/whos-that-pokemon/">See it here</a>
+                </div>
+                <div id="project_4" class="project">
+                    <!-- <img src="https://via.placeholder.com/500x400" alt=""> -->
+                    <div class="project_image"></div>
+                    <div class="project_title toggle_info">
+                        <h4>We Need Space</h4>
+                        <div>More<i class="fas fa-ellipsis-h"></i></div>
+                    </div>
+                </div>
+                <div id="project_4_info" class="project_info hidden">
+                    <h3>We Need Space</h3>
+                    <p>
+                        In this project, I worked with three other teammates to create a game in Unity. The goal of the
+                        game is to survive as long as possible while defending Earth from waves of hostile alien ships.
+                        Each wave varies in size and contains a mix of three different enemy types, each with its own
+                        unique behavior. As part of a team, my role was primarily that of a general programmer, but I
+                        also had a hand in designing some of the game's assets in Blender, including the powerups and
+                        the mothership model. Specifically, I worked on enemy behavior, the game's powerup system, as
+                        well as environmental details such as the game's asteroids. One challenging aspect towards the
+                        beginning of this project was the process of working together as a team. As time went on, we
+                        improved our teamwork and learned effective communication techniques like task management via
+                        GitHub to ensure everyone was always on track.
+                        <br><br>
+                        This project is ongoing, and a playable prototype is coming soon.
+                        <!-- Temporary image, remove when prototype available -->
+                        <br>
+                        <br>
+                        <img src="./media/images/we-need-space-prototype.png" alt="" width="100%">
+                    </p>
+                    <!-- <a href="#">See it here</a> -->
+                </div>
+                <!-- New Project Template -->
+                <!-- <div id="project_4" class="project">
+                    <img src="https://via.placeholder.com/500x400" alt="">
+                    <div class="project_image"></div>
+                    <div class="project_title toggle_info">
+                        <h4>Project 4</h4>
+                        <div>More<i class="fas fa-ellipsis-h"></i></div>
+                    </div>
+                </div>
+                <div id="project_4_info" class="project_info hidden">
+                    <h3>Project 4 Placeholder</h3>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum consequatur sunt doloremque
+                        vitae, soluta minus dolorem temporibus. Natus, vel labore! Ipsam error ullam animi provident
+                        earum, pariatur minus molestiae iste, aliquam quae voluptatem natus. Provident totam dolorem
+                        veritatis similique! Asperiores ullam, fuga quaerat, officia at inventore nostrum, similique
+                        omnis consequatur sit deserunt.
+                    </p>
+                    <a href="#">See it here</a>
+                </div> -->
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: nshaffer26@outlook.com</p>
+        </section>
+        <a id="to_top" href="./"><i class="fas fa-chevron-up"></i></a>
+    </main>
+    <footer>
+        <p>&copy; 2022 Nicholas Shaffer</p>
+    </footer>
+</body>
+
 </html>

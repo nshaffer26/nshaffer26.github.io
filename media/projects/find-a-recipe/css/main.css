@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    font-family: 'Roboto Slab';
+}
+h2 {
+    margin-top: 26px;
+    margin-bottom: 0;
+}
+h3 {
+    margin: 0;
+    padding: 0;
+}
+input {
+    border: 1px solid lightgray;
+}
+input:active {
+    border-color: black;
+}
+fieldset {
+    margin: 0;
+    border: 1px solid lightgray;
+}
+
+/* ------------- Search fields ------------- */
+#search_tools
+{
+    display: grid;
+    grid-template-areas:
+        "error error error"
+        "ingredients ingredients calories"
+        "toggleAdvanced toggleAdvanced toggleAdvanced"
+        "advanced advanced advanced"
+        "search - -";
+    gap: 10px;
+}
+#error {
+    grid-area: error;
+    color: red;
+}
+/* Ingredients */
+#search_ingredients_wrapper { grid-area: ingredients; }
+#search_ingredients_wrapper input {
+    width: 100%;
+}
+#search_ingredients_wrapper input::-webkit-search-cancel-button {
+    cursor: pointer;
+}
+/* Max calories per serving */
+#search_calories_wrapper { grid-area: calories; }
+#search_calories_wrapper input {
+    width: 100%;
+}
+/* Advance search toggle */
+#toggle_search_tools_advanced {
+    grid-area: toggleAdvanced;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+#toggle_search_tools_advanced i {
+    padding: 10px;
+}
+.search_tools_advanced {
+    grid-area: advanced;
+    display: grid;
+    grid-template-areas:
+        "meal"
+        "cuisine"
+        "health";
+    gap: 10px;
+}
+/* Advanced search options */
+#search_meal_wrapper { grid-area: meal; }
+#search_cuisine_wrapper { grid-area: cuisine; }
+#search_health_wrapper { grid-area: health; }
+.advanced_search_option {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 5px;
+}
+#search_button {
+    grid-area: search;
+    cursor: pointer;
+}
+/* Results loading */
+#search_spinner {
+    justify-self: center;
+}
+
+/* ------------- Search results ------------- */
+#search_results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 20px;
+}
+.result {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+
+    padding: 20px;
+    border: 1px solid black;
+}
+.result a img {
+    display: block;
+    width: 100%;
+}
+.result_info {
+    display: grid;
+}
+.result_info p {
+    margin: 0;
+}
+.result_link {
+    align-self: end;
+}
+
+#to_top i {
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    padding: 20px;
+    border-radius: 50%;
+    color: white;
+    background-color: black;
+    filter: opacity(75%);
+}
+
+.required {
+    color: red;
+}
+.bold {
+    font-weight: bold;
+}
+.hidden
+{
+    display: none;
+}
+
+/* ------------- Responsiveness ------------- */
+@media screen and (max-width: 690px) {
+    input, #search_button {
+        height: 39px;
+    }
+    .advanced_search_option div {
+        padding: 10px 0;
+    }
+    .advanced_search_option div input {
+        width: 26px;
+        height: 26px;
+        vertical-align: middle;
+    }
+    label {
+        padding: 10px 0;
+        padding-right: 40px;
+        vertical-align: middle;
+    }
+}
+@media screen and (max-width: 600px) {
+    #search_tools
+    {
+        grid-template-areas:
+            "error"
+            "ingredients"
+            "calories"
+            "toggleAdvanced"
+            "advanced"
+            "search";
+        gap: 20px;
+    }
+}
+@media screen and (max-width: 490px) {
+    #search_results {
+        grid-template-columns: 1fr;
+    }
+    .result {
+        grid-template-rows: 1fr min-content;
+    }
+}

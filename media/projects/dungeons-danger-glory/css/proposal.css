@@ -1,0 +1,65 @@
+/* Color Palette: https://coolors.co/fcfaee-74b3ce-508991-172a3a-004346-09bc8a */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 30px;
+    font-family: 'Roboto Mono', monospace;
+    background-color: #172A3A;
+}
+h1, h2 {
+    margin-top: 0;
+}
+h3:not(:nth-of-type(1)) {
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+}
+a:link {
+    color: #508991;
+}
+a:visited {
+    color: #508991;
+}
+a:focus, a:hover {
+    color: #09BC8A;
+}
+a:active {
+    color: #09BC8A
+}
+
+header, section, footer {
+    background-color: #FCFAEE;
+}
+header {
+    padding: 20px;
+    border-top: 24px solid #74B3CE;
+}
+section {
+    margin-top: 20px;
+    padding: 20px;
+    border-top: 24px solid #74B3CE;
+}
+footer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    border-top: 24px solid #74B3CE;
+}
+
+#mockup_images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+img {
+    display: block;
+    width: 100%;
+}

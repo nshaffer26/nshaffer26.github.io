@@ -1,0 +1,17 @@
+body {
+    font-family: "Press Start 2P";
+    cursor: url(../media/assets/objects/pointer.png) 8 8, crosshair;
+}
+
+a {
+    text-decoration: none;
+}
+a:link {
+    color: #508991;
+}
+a:visited {
+    color: #508991;
+}
+a:focus, a:hover, a:active {
+    color: #09BC8A;
+}

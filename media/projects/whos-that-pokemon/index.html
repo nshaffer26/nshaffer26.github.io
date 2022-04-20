@@ -1,0 +1,55 @@
+<!--
+Author: Nicholas Shaffer
+Date: 4/23/19
+
+APIs:
+    https://pokeapi.co/
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Who's That Pokémon?</title>
+    <meta name="author" content="Nicholas Shaffer">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+
+    <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+    <script type="text/javascript" src="script.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" media="screen and (max-width:750px)" href="mobile.css">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../images/favicon/site.webmanifest">
+</head>
+
+<body>
+    <div class="content">
+        <div id="gen-container">
+            <div id="gen1" class="button gen-selected" onclick="selectGen(1)">GEN I</div>
+            <div id="gen2" class="button" onclick="selectGen(2)">GEN II</div>
+            <div id="gen3" class="button" onclick="selectGen(3)">GEN III</div>
+            <div id="gen4" class="button" onclick="selectGen(4)">GEN IV</div>
+        </div>
+        <div id="get-pokemon" class="button" onclick="getRandomIds()">Who's That Pokémon?</div>
+        <div id="image-container">
+            <img src="./images/pokeball.png">
+            <div id="image"></div>
+            <img src="./images/pokeball.png">
+        </div>
+        <div id="choices">
+            <div id="choice0" class="button" onclick="selectChoice(0)"></div>
+            <div id="choice1" class="button" onclick="selectChoice(1)"></div>
+            <div id="choice2" class="button" onclick="selectChoice(2)"></div>
+            <div id="choice3" class="button" onclick="selectChoice(3)"></div>
+        </div>
+        <div id="error"></div>
+        <div id="feedback"></div>
+    </div>
+</body>
+
+</html>

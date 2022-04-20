@@ -1,0 +1,312 @@
+* {
+    box-sizing: content-box;
+}
+
+body {
+    margin: auto;
+    max-width: 1100px;
+    background-color: #172A3A;
+    font-family: 'Roboto Mono', monospace;
+}
+header {
+    margin: 0 20px;
+}
+section {
+    margin: 0 20px;
+    margin-top: 20px;
+    padding: 0px 60px;
+    padding-bottom: 40px;
+    background-color: #FCFAEE;
+}
+section:first-child {
+    margin-top: 0;
+}
+h1 {
+    margin-top: 0;
+}
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+a:link, a:visited {
+    color: white;
+}
+a:focus, a:hover, a:active {
+    color: #09BC8A;
+}
+.project_info a:link, .project_info a:visited {
+    color: #508991;
+}
+.project_info a:focus, .project_info a:hover, .project_info a:active {
+    color: #09BC8A;
+}
+
+#menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.5em;
+}
+#menu a:not(a:first-child) {
+    padding: 20px;
+}
+#menu a:first-child {
+    margin-right: auto;
+}
+#menu a img, #hamburger a img {
+    display: block;
+    height: 3em;
+}
+
+#home {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+        "tagline links";
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 140px;
+    background-color: #172A3A;
+}
+#home h1 {
+    grid-area: tagline;
+    margin: 0;
+    font-size: 2.2em;
+    color: white;
+}
+#links {
+    grid-area: links;
+    justify-self: end;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+#about {
+    border-top: 24px solid #74B3CE;
+}
+#about_details {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+        "image info";
+    gap: 40px;
+}
+#about_details img {
+    grid-area: image;
+    width: 100%;
+    height: auto;
+}
+#about_details p { grid-area: info; }
+
+#projects {
+    border-top: 24px solid #74B3CE;
+}
+#gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "project1 project2"
+        "p1_p2_details p1_p2_details"
+        "project3 project4"
+        "p3_p4_details p3_p4_details";
+    gap: 30px;
+}
+#project_1 { grid-area: project1; }
+#project_2 { grid-area: project2; }
+#project_3 { grid-area: project3; }
+#project_4 { grid-area: project4; }
+.project {
+    display: grid;
+    grid-template-areas:
+        "overview";
+    overflow: hidden;
+    /* height: 400px; */
+    min-height: 340px;
+}
+.project .project_image {
+    grid-area: overview;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    
+    filter: brightness(70%);
+}
+#project_1 .project_image { background-image: url("../media/images/dungeons-danger-glory.png"); }
+#project_2 .project_image { background-image: url("../media/images/find-a-recipe.png"); }
+#project_3 .project_image { background-image: url("../media/images/whos-that-pokemon.png"); }
+#project_4 .project_image { background-image: url("../media/images/we-need-space.png"); }
+.project_title {
+    grid-area: overview;
+    z-index: 1;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    color: white;
+    background-color: black;
+    opacity: 75%;
+}
+.project_title:hover {
+    cursor: pointer;
+}
+.project_title h4 {
+    margin: 0;
+    padding: 20px;
+    align-self: center;
+}
+.project_title div {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.project_title i {
+    margin-left: 10px;
+}
+.hidden {
+    display: none;
+}
+.project_info h3 {
+    margin-top: 0;
+}
+.project_info p {
+    margin-bottom: 20px;
+}
+#project_1_info { grid-area: p1_p2_details; }
+#project_2_info { grid-area: p1_p2_details; }
+#project_3_info { grid-area: p3_p4_details; }
+#project_4_info { grid-area: p3_p4_details; }
+
+#contact {
+    border-top: 24px solid #74B3CE;
+}
+
+#to_top i {
+    position: fixed;
+    z-index: 4;
+    bottom: 30px;
+    right: 50px;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: black;
+    filter: opacity(75%);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 60px 20px;
+    color: white;
+}
+footer a {
+    margin: 10px auto;
+    padding: 20px;
+}
+
+@media screen and (max-width: 900px) {
+    section {
+        padding: 0px 20px;
+        padding-bottom: 40px;
+    }
+
+    #home h1 {
+        font-size: 2em;
+    }
+
+    #about_details {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+@media screen and (max-width: 920px) {
+    #home {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "tagline"
+            "links";
+        gap: 60px;
+        padding-bottom: 100px;
+    }
+    #home h1 {
+        text-align: center;
+    }
+    #links {
+        justify-self: center;
+        align-self: end;
+        text-align: center;
+        flex-direction: row;
+    }
+    #links a {
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 700px) {
+    section {
+        margin: 0 10px;
+        margin-top: 20px;
+    }
+
+    #home h1 {
+        font-size: 1.6em;
+    }
+
+    #gallery {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "project1"
+            "p1_details"
+            "project2"
+            "p2_details"
+            "project3"
+            "p3_details"
+            "project4"
+            "p4_details";
+    }
+    #project_1_info { grid-area: p1_details; }
+    #project_2_info { grid-area: p2_details; }
+    #project_3_info { grid-area: p3_details; }
+    #project_4_info { grid-area: p4_details; }
+    .project_title h4 {
+        padding: 30px;
+    }
+    .project_title i {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #menu {
+        display: none;
+        height: auto;
+        flex-direction: column;
+    }
+    #menu a {
+        width: 100vw;
+        padding: 30px 0;
+        text-align: center;
+    }
+    #menu a:first-child {
+        margin-right: unset;
+    }
+    #hamburger {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.8em;
+    }
+    #hamburger i {
+        padding: 30px;
+        color: white;
+    }
+    #about_details {
+        grid-template-rows: 1fr max-content;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "image"
+            "info";
+    }
+}
