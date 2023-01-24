@@ -1,7 +1,7 @@
 /*
     AUTHOR: Nicholas Shaffer
     DATE: 3/19/2021
-    UPDATED: 4/19/2022
+    UPDATED: 1/24/2023
 */
 
 // ------------- HAMBURGER MENU ------------- //
@@ -9,8 +9,9 @@ let hamburger = document.querySelector("#hamburger_button");
 let menu = document.querySelector("#menu");
 menu.dataset.collapsed = "true";
 
-window.onresize = e => {
-    if(screen.width > 650)
+window.onresize = e =>
+{
+    if (screen.width > 650)
     {
         menu.style.display = "flex";
         menu.innerHTML =
@@ -34,7 +35,7 @@ window.onresize = e => {
 let toggleMenu = (e) =>
 {
     let collapsed = menu.dataset.collapsed;
-    if(collapsed == "true")
+    if (collapsed == "true")
     {
         menu.style.display = "flex";
         collapsed = "false";
@@ -48,11 +49,11 @@ let toggleMenu = (e) =>
 }
 
 hamburger.addEventListener("click", toggleMenu);
-
 // END ------------- HAMBURGER MENU ------------- END //
 
 // START ------------- PROJECT INFO TOGGLE ------------- START //
-let toggleInfo = document.querySelectorAll(".toggle_info");
+let projects = document.querySelectorAll(".project");
+let toggleSymbol = document.querySelectorAll(".project_info_symbol");
 
 let project1Info = document.querySelector("#project_1_info");
 let project2Info = document.querySelector("#project_2_info");
@@ -62,19 +63,20 @@ let project4Info = document.querySelector("#project_4_info");
 let toggleProjectInfo = (e) =>
 {
     // Toggle icon change between ellipsis and downward chevron
-    for(let elem of toggleInfo)
+    let selected = document.querySelector("#" + e.currentTarget.id + "_symbol");
+    for (let elem of toggleSymbol)
     {
-        if(elem !== e.currentTarget)
+        if (elem.classList.contains("fas") && elem.id != selected.id)
         {
-            elem.lastElementChild.lastElementChild.classList.add("fa-ellipsis-h");
-            elem.lastElementChild.lastElementChild.classList.remove("fa-chevron-down");
+            elem.classList.add("fa-ellipsis-h");
+            elem.classList.remove("fa-chevron-down");
         }
     }
-    e.currentTarget.lastElementChild.lastElementChild.classList.toggle("fa-ellipsis-h");
-    e.currentTarget.lastElementChild.lastElementChild.classList.toggle("fa-chevron-down");
+    selected.classList.toggle("fa-ellipsis-h");
+    selected.classList.toggle("fa-chevron-down");
 
     // Hide or remove project info based on what was selected
-    switch(e.currentTarget.parentElement.id)
+    switch (e.currentTarget.id)
     {
         case "project_1":
             project1Info.classList.toggle("hidden");
@@ -103,7 +105,7 @@ let toggleProjectInfo = (e) =>
     }
 }
 
-for(let elem of toggleInfo)
+for (let elem of projects)
 {
     elem.addEventListener("click", toggleProjectInfo);
 }

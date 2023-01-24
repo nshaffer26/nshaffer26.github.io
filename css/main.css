@@ -151,6 +151,7 @@ a:focus, a:hover, a:active {
     background-color: black;
     opacity: 75%;
 }
+.project_image:hover,
 .project_title:hover {
     cursor: pointer;
 }
