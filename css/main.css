@@ -112,13 +112,16 @@ a:focus, a:hover, a:active {
         "project1 project2"
         "p1_p2_details p1_p2_details"
         "project3 project4"
-        "p3_p4_details p3_p4_details";
+        "p3_p4_details p3_p4_details"
+        "project5 project6"
+        "p5_p6_details p5_p6_details";
     gap: 30px;
 }
 #project_1 { grid-area: project1; }
 #project_2 { grid-area: project2; }
 #project_3 { grid-area: project3; }
 #project_4 { grid-area: project4; }
+#project_5 { grid-area: project5; }
 .project {
     display: grid;
     grid-template-areas:
@@ -181,6 +184,7 @@ a:focus, a:hover, a:active {
 #project_2_info { grid-area: p1_p2_details; }
 #project_3_info { grid-area: p3_p4_details; }
 #project_4_info { grid-area: p3_p4_details; }
+#project_5_info { grid-area: p5_p6_details; }
 
 #contact {
     border-top: 24px solid #74B3CE;

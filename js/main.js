@@ -62,46 +62,34 @@ let project4Info = document.querySelector("#project_4_info");
 
 let toggleProjectInfo = (e) =>
 {
+    let selected = e.currentTarget;
+
     // Toggle icon change between ellipsis and downward chevron
-    let selected = document.querySelector("#" + e.currentTarget.id + "_symbol");
+    let symbol = document.querySelector("#" + selected.id + "_symbol");
     for (let elem of toggleSymbol)
     {
-        if (elem.classList.contains("fas") && elem.id != selected.id)
+        if (elem.classList.contains("fas") && elem.id != symbol.id)
         {
             elem.classList.add("fa-ellipsis-h");
             elem.classList.remove("fa-chevron-down");
         }
     }
-    selected.classList.toggle("fa-ellipsis-h");
-    selected.classList.toggle("fa-chevron-down");
+    symbol.classList.toggle("fa-ellipsis-h");
+    symbol.classList.toggle("fa-chevron-down");
 
-    // Hide or remove project info based on what was selected
-    switch (e.currentTarget.id)
+    // Reveal the current project's info and hide all others
+    for (let elem of projects)
     {
-        case "project_1":
-            project1Info.classList.toggle("hidden");
-            project2Info.classList.add("hidden");
-            project3Info.classList.add("hidden");
-            project4Info.classList.add("hidden");
-            break;
-        case "project_2":
-            project1Info.classList.add("hidden");
-            project2Info.classList.toggle("hidden");
-            project3Info.classList.add("hidden");
-            project4Info.classList.add("hidden");
-            break;
-        case "project_3":
-            project1Info.classList.add("hidden");
-            project2Info.classList.add("hidden");
-            project3Info.classList.toggle("hidden");
-            project4Info.classList.add("hidden");
-            break;
-        case "project_4":
-            project1Info.classList.add("hidden");
-            project2Info.classList.add("hidden");
-            project3Info.classList.add("hidden");
-            project4Info.classList.toggle("hidden");
-            break;
+        let info = document.querySelector("#" + elem.id + "_info");
+
+        if(elem.id == selected.id)
+        {
+            info.classList.toggle("hidden");
+        }
+        else
+        {
+            info.classList.add("hidden");
+        }
     }
 }
 
