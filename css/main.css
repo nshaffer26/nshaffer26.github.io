@@ -143,6 +143,7 @@ a:focus, a:hover, a:active {
 #project_2 .project_image { background-image: url("../media/images/find-a-recipe.png"); }
 #project_3 .project_image { background-image: url("../media/images/whos-that-pokemon.png"); }
 #project_4 .project_image { background-image: url("../media/images/we-need-space.png"); }
+#project_5 .project_image { background-image: url("../media/images/changelingvr.png"); }
 .project_title {
     grid-area: overview;
     z-index: 1;
