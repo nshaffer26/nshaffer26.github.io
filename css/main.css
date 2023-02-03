@@ -151,9 +151,8 @@ a:focus, a:hover, a:active {
     display: flex;
     justify-content: space-between;
     align-self: flex-end;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.75);
     color: #EEE;
-    opacity: 75%;
 }
 .project:hover {
     cursor: pointer;

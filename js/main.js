@@ -98,16 +98,16 @@ let brightenProject = (e) =>
     let image = document.querySelector("#" + e.currentTarget.id + " .project_image");
     let title = document.querySelector("#" + e.currentTarget.id + " .project_title");
     image.style.filter = "brightness(100%)";
+    title.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
     title.style.color = "#FFF";
-    title.style.opacity = "80%";
 }
 let darkenProject = (e) =>
 {
     let image = document.querySelector("#" + e.currentTarget.id + " .project_image");
     let title = document.querySelector("#" + e.currentTarget.id + " .project_title");
     image.style.filter = "brightness(70%)";
+    title.style.backgroundColor = "rgba(0, 0, 0, 0.75)";
     title.style.color = "#EEE";
-    title.style.opacity = "75%";
 }
 
 for (let elem of projects)
