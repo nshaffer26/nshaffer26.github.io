@@ -151,12 +151,11 @@ a:focus, a:hover, a:active {
     display: flex;
     justify-content: space-between;
     align-self: flex-end;
-    color: white;
     background-color: black;
+    color: #EEE;
     opacity: 75%;
 }
-.project_image:hover,
-.project_title:hover {
+.project:hover {
     cursor: pointer;
 }
 .project_title h4 {
