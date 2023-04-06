@@ -37,10 +37,12 @@ a:link, a:visited {
 a:focus, a:hover, a:active {
     color: #09BC8A;
 }
-.project_info a:link, .project_info a:visited {
+.project_info a:link, .project_info a:visited,
+#dark_link:link, #dark_link:visited {
     color: #508991;
 }
-.project_info a:focus, .project_info a:hover, .project_info a:active {
+.project_info a:focus, .project_info a:hover, .project_info a:active,
+#dark_link:focus, #dark_link:hover, #dark_link:active {
     color: #09BC8A;
 }
 
