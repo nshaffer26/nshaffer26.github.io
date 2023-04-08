@@ -59,6 +59,8 @@ let project1Info = document.querySelector("#project_1_info");
 let project2Info = document.querySelector("#project_2_info");
 let project3Info = document.querySelector("#project_3_info");
 let project4Info = document.querySelector("#project_4_info");
+let project5Info = document.querySelector("#project_5_info");
+let project6Info = document.querySelector("#project_6_info");
 
 let toggleProjectInfo = (e) =>
 {

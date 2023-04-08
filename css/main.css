@@ -124,6 +124,7 @@ a:focus, a:hover, a:active {
 #project_3 { grid-area: project3; }
 #project_4 { grid-area: project4; }
 #project_5 { grid-area: project5; }
+#project_6 { grid-area: project6; }
 .project {
     display: grid;
     grid-template-areas:
@@ -146,6 +147,7 @@ a:focus, a:hover, a:active {
 #project_3 .project_image { background-image: url("../media/images/whos-that-pokemon.png"); }
 #project_4 .project_image { background-image: url("../media/images/we-need-space.png"); }
 #project_5 .project_image { background-image: url("../media/images/changelingvr.png"); }
+#project_6 .project_image { background-image: url("../media/images/pirates_quest.png"); }
 .project_title {
     grid-area: overview;
     z-index: 1;
@@ -186,7 +188,7 @@ a:focus, a:hover, a:active {
 #project_3_info { grid-area: p3_p4_details; }
 #project_4_info { grid-area: p3_p4_details; }
 #project_5_info { grid-area: p5_p6_details; }
-
+#project_6_info { grid-area: p5_p6_details; }
 #contact {
     border-top: 24px solid #74B3CE;
 }
@@ -270,12 +272,18 @@ footer a {
             "project3"
             "p3_details"
             "project4"
-            "p4_details";
+            "p4_details"
+            "project5"
+            "p5_details"
+            "project6"
+            "p6_details";
     }
     #project_1_info { grid-area: p1_details; }
     #project_2_info { grid-area: p2_details; }
     #project_3_info { grid-area: p3_details; }
     #project_4_info { grid-area: p4_details; }
+    #project_5_info { grid-area: p5_details; }
+    #project_6_info { grid-area: p6_details; }
     .project_title h4 {
         padding: 30px;
     }
