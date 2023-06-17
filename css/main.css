@@ -116,7 +116,9 @@ a:focus, a:hover, a:active {
         "project3 project4"
         "p3_p4_details p3_p4_details"
         "project5 project6"
-        "p5_p6_details p5_p6_details";
+        "p5_p6_details p5_p6_details"
+        "project7 project8"
+        "p7_p8_details p7_p8_details";
     gap: 30px;
 }
 #project_1 { grid-area: project1; }
@@ -125,6 +127,8 @@ a:focus, a:hover, a:active {
 #project_4 { grid-area: project4; }
 #project_5 { grid-area: project5; }
 #project_6 { grid-area: project6; }
+#project_7 { grid-area: project7; }
+#project_8 { grid-area: project8; }
 .project {
     display: grid;
     grid-template-areas:
@@ -146,8 +150,10 @@ a:focus, a:hover, a:active {
 #project_2 .project_image { background-image: url("../media/images/dungeons-danger-glory.png"); }
 #project_3 .project_image { background-image: url("../media/images/changelingvr.png"); }
 #project_4 .project_image { background-image: url("../media/images/we-need-space.png"); }
-#project_5 .project_image { background-image: url("../media/images/whos-that-pokemon.png"); }
-#project_6 .project_image { background-image: url("../media/images/find-a-recipe.png"); }
+#project_5 .project_image { background-image: url("../media/images/tempo_attack.png"); }
+#project_6 .project_image { background-image: url("../media/images/adopt_dont_shop.png"); }
+#project_7 .project_image { background-image: url("../media/images/whos-that-pokemon.png"); }
+#project_8 .project_image { background-image: url("../media/images/find-a-recipe.png"); }
 .project_title {
     grid-area: overview;
     z-index: 1;
@@ -189,6 +195,8 @@ a:focus, a:hover, a:active {
 #project_4_info { grid-area: p3_p4_details; }
 #project_5_info { grid-area: p5_p6_details; }
 #project_6_info { grid-area: p5_p6_details; }
+#project_7_info { grid-area: p7_p8_details; }
+#project_8_info { grid-area: p7_p8_details; }
 #contact {
     border-top: 24px solid #74B3CE;
 }
@@ -276,7 +284,11 @@ footer a {
             "project5"
             "p5_details"
             "project6"
-            "p6_details";
+            "p6_details"
+            "project7"
+            "p7_details"
+            "project8"
+            "p8_details";
     }
     #project_1_info { grid-area: p1_details; }
     #project_2_info { grid-area: p2_details; }
@@ -284,6 +296,8 @@ footer a {
     #project_4_info { grid-area: p4_details; }
     #project_5_info { grid-area: p5_details; }
     #project_6_info { grid-area: p6_details; }
+    #project_7_info { grid-area: p7_details; }
+    #project_8_info { grid-area: p8_details; }
     .project_title h4 {
         padding: 30px;
     }
